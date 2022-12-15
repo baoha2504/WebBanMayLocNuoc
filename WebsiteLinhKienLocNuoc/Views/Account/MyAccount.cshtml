@@ -1,0 +1,94 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model Customer
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Thông Tin Tài Khoản</a></li>
+
+        </ul>
+        <div class="row">
+            <!--Left Part Start -->
+            <aside class="col-sm-4 col-md-3" id="column-left"> 
+                <div class="module blog-category titleLine">
+                    <h3 class="modtitle">Danh Mục</h3>
+                    <div class="modcontent">
+                        <ul class="list-group ">
+                            <li class="list-group-item"> <a href="/Account/MyAccount" class="group-item">Thông Tin Tài Khoản</a></li>
+                            <li class="list-group-item"><a href="/Order/OrderHistory" class="group-item">Lịch Sử Mua Hàng</a></li>
+                            <li class="list-group-item"><a href="/Account/MyComment" class="group-item">Đánh Giá Của Tôi</a></li>
+                            <li class="list-group-item"><a href="/Account/ChangedPassword" class="group-item">Đổi Mật Khẩu</a></li>
+                            <li class="list-group-item"><a href="/Account/Logout" class="group-item">Đăng Xuất</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </aside>
+            <!--Left Part End -->
+            <!--Middle Part Start-->
+            <div id="content" class="col-md-9 col-sm-8">
+                    <p class="lead">Hello, <strong>@Model.LastName!</strong> - To update your account information.</p>
+                    <form action="/updateInfor" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <fieldset id="personal-details">
+                                    <legend>Thông Tin Cá Nhân</legend>
+                                    <div class="form-group required">
+                                        <label for="input-firstname" class="control-label">Họ</label>
+                                        <input type="text" class="form-control" id="input-firstname" placeholder="First Name" value="@Model.FirstName" name="firstname" required>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-lastname" class="control-label">Tên</label>
+                                        <input type="text" class="form-control" id="input-lastname" placeholder="Last Name" value="@Model.LastName" name="lastname" required>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-email" class="control-label">E-Mail</label>
+                                        <input type="email" class="form-control" id="input-email" placeholder="E-Mail" value="@Model.Email" name="email" required readonly>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-telephone" class="control-label">Điện Thoại</label>
+                                        <input type="tel" class="form-control" id="input-telephone" placeholder="Phone" value="@Model.Phone" name="phone" required>
+                                    </div>
+                                    
+                                </fieldset>
+                                <br>
+                            </div>
+                            <div class="col-sm-6">
+                                <fieldset id="shipping-address">
+                                    <legend>Địa Chỉ</legend>
+                                    <div class="form-group">
+                                        <label for="input-company" class="control-label">Công Ty</label>
+                                        <input type="text" class="form-control" id="input-company" placeholder="Company" value="@Model.Company" name="company">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-address-1" class="control-label">Địa Chỉ 1</label>
+                                        <input type="text" class="form-control" id="input-address-1" placeholder="Address 1" value="@Model.Address1" name="address_1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-address-2" class="control-label">Địa Chỉ 2</label>
+                                        <input type="text" class="form-control" id="input-address-2" placeholder="Address 2" value="@Model.Address2" name="address_2">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-city" class="control-label">Thành Phố</label>
+                                        <input type="text" class="form-control" id="input-city" placeholder="City" value="@Model.City" name="city" required>
+                                    </div>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="buttons clearfix">
+                            <div class="col-sm-offset-5 col-sm-2">
+                                <input type="submit" class="btn btn-md btn-primary" value="Lưu Lại">
+                            </div>
+                        </div>
+                    </form>
+                
+            </div>
+
+
+        </div>
+        <!--Middle Part End-->
+    </div>

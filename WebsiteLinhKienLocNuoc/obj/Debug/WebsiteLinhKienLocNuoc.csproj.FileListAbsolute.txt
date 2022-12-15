@@ -1,0 +1,371 @@
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll.config
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.pdb
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe.config
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.rsp
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe.config
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.rsp
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.AppContext.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Console.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Http.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.ValueTuple.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe.config
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.rsp
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebGrease.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.pdb
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CopyComplete
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.dll
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.pdb
+C:\Users\PC\source\repos\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csprojAssemblyReference.cache
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll.config
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.pdb
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe.config
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.rsp
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe.config
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.rsp
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.AppContext.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Collections.Immutable.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Console.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Globalization.Calendars.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Http.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Sockets.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Reflection.Metadata.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.ValueTuple.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe.config
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.rsp
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe.config
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.Web.Infrastructure.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebGrease.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.pdb
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CoreCompileInputs.cache
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CopyComplete
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.dll
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.pdb
+E:\Code\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.AssemblyReference.cache
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll.config
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.pdb
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe.config
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.rsp
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe.config
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.rsp
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.AppContext.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Console.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Http.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.ValueTuple.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe.config
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.rsp
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebGrease.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.pdb
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.AssemblyReference.cache
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CoreCompileInputs.cache
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CopyComplete
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.dll
+C:\Users\QUYNH\Documents\CN_WEB\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.pdb
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll.config
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebsiteLinhKienLocNuoc.pdb
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.exe.config
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csc.rsp
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.exe.config
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\csi.rsp
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.AppContext.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Console.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Http.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.ValueTuple.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.exe.config
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\vbc.rsp
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\WebGrease.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\EntityFramework.SqlServer.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\PagedList.Mvc.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Net.Http.Formatting.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Http.WebHost.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Helpers.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Mvc.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Optimization.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.Razor.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\System.Web.WebPages.Razor.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Newtonsoft.Json.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Antlr3.Runtime.pdb
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.AssemblyReference.cache
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CoreCompileInputs.cache
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.csproj.CopyComplete
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.dll
+C:\Users\hacon\Documents\NAM 4 KI 1\Cong Nghe Web\Tai Lieu\WebsiteLinhKienLocNuoc\WebsiteLinhKienLocNuoc\obj\Debug\WebsiteLinhKienLocNuoc.pdb

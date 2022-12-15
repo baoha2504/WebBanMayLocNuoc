@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Tài Khoản</a></li>
+            <li><a href="#">Đăng Ký</a></li>
+        </ul>
+
+        <div class="row">
+
+            <div id="content" class="col-sm-12">
+                <h2 class="title">Đăng Ký Tài Khoản</h2>
+                <p>Nếu bạn đã có tài khoản vui lòng <a href="#">đăng nhập</a>.</p>
+                @if (TempData["Error"] != null)//kiểm tra thông báo để hiển thị
+                {
+                    
+                    <div id="alert" class="alert alert-danger class=" col-sm-8 col-sm-offset-2"">
+                        <i class="fa fa-exclamation-circle"></i> Thất bại : @TempData["Error"]
+                    </div>
+                }
+                else if (TempData["Succes"] != null)
+                {
+                    <div id="alert" class="alert alert-success col-sm-8 col-sm-offset-2">
+                        <i class="fa fa-check-circle"></i>Đăng ký tài khoản thành công
+                    </div>
+                }
+                <form action="/confirmRegister" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix" id="form-register">
+                    <fieldset id="account">
+                        <legend>Thông Tin Cá Nhân </legend>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-firstname">Họ</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="firstname" value="" placeholder="First Name" id="input-firstname" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-lastname">Tên</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="lastname" value="" placeholder="Last Name" id="input-lastname" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-email">E-Mail</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" value="" placeholder="E-Mail" id="input-email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-telephone">Điện Thoại</label>
+                            <div class="col-sm-10">
+                                <input type="tel" name="telephone" value="" placeholder="Telephone" id="input-telephone" class="form-control" required>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset id="address">
+                        <legend>Địa Chỉ</legend>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="input-company">Công Ty</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="company" value="" placeholder="Company" id="input-company" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-address-1">Địa Chỉ 1</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="address_1" value="" placeholder="Address 1" id="input-address-1" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="input-address-2">Địa Chỉ 2</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="address_2" value="" placeholder="Address 2" id="input-address-2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-city">Thành Phố </label>
+                            <div class="col-sm-10">
+                                <input type="text" name="city" value="" placeholder="City" id="input-city" class="form-control" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mật Khẩu</legend>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-password">Mật Khẩu</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-confirm">Nhập Lại Mật Khẩu</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="confirm" value="" placeholder="Password Confirm" id="input-confirm" class="form-control" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="buttons">
+                        <div class="pull-right">
+
+                            <input type="submit" value="Đăng Ký" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function remove() {
+            var alert = document.getElementById("alert");
+            alert.remove();
+        }
+        window.onload = function () {
+            document.onclick = function () {
+                remove();
+            };
+        }
+    </script>

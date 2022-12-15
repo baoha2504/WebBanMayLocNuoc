@@ -1,0 +1,166 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model List<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="mt-0 header-title">Danh Sách Sản Phẩm</h4>
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
+                                <thead>
+                                    <tr>
+                                        <th>Mã</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Nhãn Hiệu</th>
+                                        <th>Model</th>
+                                        <th>Ngày Thêm</th>
+                                        <th>Trạng Thái</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ProductID</td>
+                                            <td>
+                                                @item.ProductName
+
+                                            <a href="/Admin/ProductAdmin/EditProduct?productid=@item.ProductID"><i class="ion-edit"></i></a>
+
+                                        </td>
+                                        <td>@item.Brand</td>
+                                        <td>@item.Model</td>
+                                        <td>@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdded)</td>
+                                        @if (item.Status == 1)
+                                        {
+                                            <td><span class="badge badge-success">Đang Bán</span></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light" onclick="stopselling('@item.ProductID');">Ngừng Bán</button>
+                                                </div>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td><span class="badge badge-danger">Ngừng Bán</span></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light" onclick="openselling('@item.ProductID');">Mở Bán</button>
+                                                </div>
+                                            </td>
+                                        }
+
+                                    </tr>
+                                }
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+
+        </div>
+        <!-- container-fluid -->
+
+    </div>
+    <!-- content -->
+
+</div>
+<script>
+    function stopselling(id) {
+        swal({
+            title: 'Chắc chắn muốn dừng bán?',
+            text: "You won't be able to revert this!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger m-l-10',
+            confirmButtonText: 'Đúng, Ngừng Bán!',
+            cancelButtonText: 'Hủy'
+        }).then(function () {
+            $.ajax({
+                url: '/Admin/ProductAdmin/UpdateStatus/',
+                dataType: 'json',
+                data: { productid: id, status: 2 },
+                type: 'POST',
+                success: function (response) {
+                    if (response.status == true) {
+                        swal({
+                            title: 'Thành công!',
+                            text: 'Sản phẩm đã ngừng bán.',
+                            type: 'success'
+                        }).then(function () {
+                            window.location.reload();
+                        })
+                    }
+                    else {
+                        swal({
+                            title: 'Không thành công!',
+                            text: 'Đã xảy ra lỗi.',
+                            type: 'success'
+                        })
+                    }
+                }
+            });
+
+        })
+    };
+    function openselling(id) {
+        swal({
+            title: 'Chắc chắn muốn mở bán?',
+            text: "You won't be able to revert this!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger m-l-10',
+            confirmButtonText: 'Đúng, Mở Bán!',
+            cancelButtonText: 'Hủy'
+        }).then(function () {
+            $.ajax({
+                url: '/Admin/ProductAdmin/UpdateStatus/',
+                dataType: 'json',
+                data: { productid: id, status: 1 },
+                type: 'POST',
+                success: function (response) {
+                    if (response.status == true) {
+                        swal({
+                            title: 'Thành công!',
+                            text: 'Sản phẩm đã mở bán.',
+                            type: 'success'
+                        }).then(function () {
+                            window.location.reload();
+                        })
+                    }
+                    else {
+                        swal({
+                            title: 'Không thành công!',
+                            text: 'Đã xảy ra lỗi.',
+                            type: 'error'
+                        })
+                    }
+                }
+            });
+        })
+    };
+    window.onload = function () {
+        var table1 = $('#datatable-buttons').DataTable();
+        table1.order([[0, 'desc']]).draw();
+
+    };
+
+</script>

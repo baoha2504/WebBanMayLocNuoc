@@ -1,0 +1,633 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model List<Product>
+@{
+    var list1 = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.lst1;
+    var list2 = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.lst2;
+    var list3 = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.lst3;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <div id="wrapper" class="wrapper-full banners-effect-7"> 
+        <!-- Header Container  -->
+        <header id="header" class=" variantleft type_2">
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-top-left form-inline col-sm-6 col-xs-12 compact-hidden">
+
+                        </div>
+                        <div class="header-top-right collapsed-block text-right  col-sm-6 col-xs-12 compact-hidden">
+
+                            <ul class="top-link list-inline" style="">
+
+                                @if (Session["user"] == null)
+                                {
+                                    <li class="login"><a href="/Account/Login" title="Login"><span>Đăng Nhập</span></a></li>
+                                    <li><a href="/Account/Register" title="Register"><span>Đăng Ký</span></a></li>
+                                }
+                                else
+                                {
+                                    <li class="account" id="my_account">
+                                        <a href="/Account/MyAccount" title="My Account" class="btn btn-xs dropdown-toggle" data-toggle="dropdown"> <span>Xin Chào @Session["user"]</span> <span class="fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu ">
+                                            <li><a href="/Account/MyAccount"><i class="fa fa-user"></i> Thông Tin Tài Khoản </a></li>
+                                            <li><a href="/Order/OrderHistory"><i class="fa fa-check-circle"></i> Đơn Mua </a></li>
+                                            <li><a href="/Account/Logout"><i class="fa fa-sign-out"></i> Đăng Xuất </a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                <li class="checkout"><a href="/Cart/Index" title="Shopping Cart"><span>Giỏ Hàng</span></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Header Top -->
+            <!-- Header center -->
+            <div class="header-center left">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div class="navbar-logo col-md-3 col-sm-12 col-xs-12">
+                            <a href="/Home/index">
+                                <img src="~/Public/image/demo/Logonew.gif" title="Your Store"
+                                     alt="Your Store" />
+                            </a>
+                        </div>
+                        <!-- //end Logo -->
+                        <!-- Main Menu -->
+                        <div class="megamenu-hori navbar-menu col-md-9 col-sm-12 col-xs-12">
+                            <div class="responsive so-megamenu">
+                                <nav class="navbar-default">
+                                    <div class=" container-megamenu  horizontal">
+                                        <div class="megamenu-wrapper">
+                                            <span id="remove-megamenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container">
+                                                    <ul class="megamenu " data-transition="slide"
+                                                        data-animationtime="250">
+                                                        <li>
+                                                            <img src="~/Public/image/demo/slider-1.png">
+                                                        </li>
+                                                        <li class="hidden-md">
+                                                            <b>&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+
+                                                            <b>Giao Hàng</b>
+                                                            <br> Miễn phí tại Hà Nội
+
+                                                        </li>
+                                                        <li>
+                                                            <b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+                                                            <img src="~/Public/image/demo/slider-2.png">
+                                                        </li>
+                                                        <li class="hidden-md">
+                                                            <b>&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+
+                                                            <b>0358775132</b>
+                                                            <br> Bảo hành chính hãng
+                                                        </li>
+                                                        <li>
+                                                            <b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+                                                            <img src="~/Public/image/demo/slider-3.png">
+                                                        </li>
+                                                        <li class="hidden-md">
+                                                            <b>&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+                                                            <b>Thanh Toán</b>
+                                                            <br> Khi nhận hàng
+                                                        </li>
+                                                        <li>
+                                                            <b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+                                                            <img src="~/Public/image/demo/slider-4.png">
+                                                        </li>
+                                                        <li class="hidden-md">
+                                                            <b>&ensp;&ensp;&ensp;</b>
+                                                        </li>
+                                                        <li>
+
+                                                            <b>Lắp Đặt</b>
+                                                            <br> Miễn Phí
+
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+
+                        </div>
+                        <!-- //Main Menu -->
+                        <!-- Secondary menu -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- //Header center -->
+            <!-- Header Bottom -->
+            <div class="header-bottom compact-hidden">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="sidebar-menu col-md-3 col-sm-3 col-xs-12 ">
+                            <div class="responsive so-megamenu">
+                                <div class="so-vertical-menu no-gutter compact-hidden">
+                                    <nav class="navbar-default">
+                                        <div class="container-megamenu vertical open">
+                                            <div id="menuHeading">
+                                                <div class="megamenuToogle-wrapper" style="background:#f4a137">
+                                                    <div class="megamenuToogle-pattern">
+                                                        <div class="container">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                            Danh Mục
+                                                            <i class="fa pull-right arrow-circle fa-chevron-circle-up"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="navbar-header">
+                                                <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle fa fa-list-alt">
+                                                </button>
+                                                Danh Mục
+                                            </div>
+                                            <div class="vertical-wrapper">
+                                                <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                                <div class="module menu-category titleLine modcontent">
+                                                    <div class="modcontent">
+                                                        <div class="box-category">
+                                                            <ul id="cat_accordion" class="list-group">
+                                                                <li class="hadchild">
+                                                                    <a class="cutom-parent" href="/Categories/Categories?id=1">Máy Lọc Nước</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                                                                    <ul style="display: none;">
+                                                                        <li><a href="/SubCategories/SubCategories?id=1">Máy Lọc Nước Kangaroo</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=2">Máy Lọc Nước Karofi</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=3">Máy Lọc Nước RO</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="hadchild">
+                                                                    <a class="cutom-parent" href="/Categories/Categories?id=2">Lõi Lọc Nước</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                                                                    <ul style="display: none;">
+                                                                        <li><a href="/SubCategories/SubCategories?id=4">Lõi Lọc Nước Karofi</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=5">Lõi Lọc Nước Kangaroo</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=6">Lõi Lọc Nước CTO</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=7">Lõi Lọc Nước RoTex</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=8">Lõi Lọc Nước Khác</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class=""><a href="/Categories/Categories?id=3" class="cutom-parent">Cốc Lọc</a>  <span class="dcjq-icon"></span></li>
+                                                                <li class="hadchild">
+                                                                    <a href="/Categories/Categories?id=4" class="cutom-parent">Màng Lọc Nước</a>    <span class="button-view  fa fa-plus-square-o"></span>
+                                                                    <ul style="display: none;">
+                                                                        <li><a href="/SubCategories/SubCategories?id=10">Màng Lọc Nước RO</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=11">Màng Lọc Nước Rotex</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class=""><a href="/Categories/Categories?id=5" class="cutom-parent">Bình Áp</a>  <span class="dcjq-icon"></span></li>
+                                                                <li class="hadchild">
+                                                                    <a href="/Categories/Categories?id=6" class="cutom-parent">Bơm &amp; Nguồn Điện</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                                                                    <ul style="display: none;">
+                                                                        <li><a href="/SubCategories/SubCategories?id=13">Bơm</a></li>
+                                                                        <li><a href="/SubCategories/SubCategories?id=14">Nguồn Điện</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class=""><a href="/Categories/Categories?id=7" class="cutom-parent">Van </a>  <span class="dcjq-icon"></span></li>
+                                                                <li class=""><a href="/Categories/Categories?id=8" class="cutom-parent">Sản Phẩm Khác</a>  <span class="dcjq-icon"></span></li>
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-5 search-pro collapsed-block">
+                            <h5 class="tabBlockTitle visible-xs">Search <a class="expander " href="#sosearchpro"><i class="fa fa-angle-down"></i></a></h5>
+                            <div id="sosearchpro" class="col-xs-12 search-pro tabBlock">
+                                <form method="GET" action="/Home/Search">
+                                    <div id="search0" class="search input-group">
+
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50"
+                                               autocomplete="off" placeholder="Tìm kiếm sản phẩm" name="search">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="button-search btn btn-primary"
+                                                    name="submit_search">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 shopping_cart hidden-xs collapsed-block">
+                            <!--cart-->
+                            @{Html.RenderAction("CartPartial", "Cart");}
+
+                            <!--//cart-->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </header>
+        <section class="so-spotlight1">
+            <div class="container">
+                <div class="row">
+                    <div id="yt_header_right" class="col-lg-offset-3 col-lg-9 col-md-12">
+                        <div class="slider-container ">
+                            <div id="so-slideshow">
+                                <div class="module">
+                                    <div class="yt-content-slider yt-content-slider--arrow1" data-autoplay="yes"
+                                         data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="0"
+                                         data-items_column0="1" data-items_column1="1" data-items_column2="1"
+                                         data-items_column3="1" data-items_column4="1" data-arrows="yes"
+                                         data-pagination="no" data-lazyload="yes" data-loop="yes" data-hoverpause="yes">
+                                        <div class="yt-content-slide">
+                                            <a href="#">
+                                                <img src="~/Public/image/demo/slider_sl_5.jpg" alt="slider1"
+                                                     class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="yt-content-slide">
+                                            <a href="#">
+                                                <img src="~/Public/image/demo/slider_sl_6.jpg" alt="slider2"
+                                                     class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="yt-content-slide">
+                                            <a href="#">
+                                                <img src="~/Public/image/demo/slider_sl_7.jpg" alt="slider3"
+                                                     class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="yt-content-slide">
+                                            <a href="#">
+                                                <img src="~/Public/image/demo/slider_sl_2.jpg" alt="slider3"
+                                                     class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="yt-content-slide">
+                                            <a href="#">
+                                                <img src="~/Public/image/demo/slider_sl_3.jpg" alt="slider3"
+                                                     class="img-responsive">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="loadeding"></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //Header Container  -->
+        <!-- Main Container  -->
+        <div class="main-container container">
+
+            <div class="row">
+                <aside class="col-md-3 col-xs-12  content-aside right_column">
+                    <div class="module latest-product titleLine animated wow slideInLeft" data-wow-delay=".5s">
+                        <h3 class="modtitle">Sản Phẩm Bán Chạy Nhất</h3>
+                        <div class="modcontent ">
+                            @foreach (var item in list2)
+                            {
+                                <div class="product-latest-item">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="@Url.Action("DetailProduct", "Product", new { id = item.ProductID })">
+                                                <img src="~/Public/image/demo/@item.Image" alt="Cisi Chicken"
+                                                     title="Cisi Chicken" class="img-responsive"
+                                                     style="width: 100px; height: 82px;">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="caption">
+                                                <h4><a href="@Url.Action("DetailProduct", "Product", new { id = item.ProductID })">@item.ProductName</a></h4>
+
+                                                <div class="price">
+                                                    @{int price = (int)@item.PriceNew; }
+                                                    <span class="price-new">@price.ToString("N0")</span>
+                                                </div>
+                                                <div class="ratings">
+                                                    <div class="rating-box">
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                    @*<div class="module banners-effect-11">
+                            <div class="modcontent clearfix">
+                                <div class="banners">
+                                    <div>
+                                        <a href="#"><img src="~/Public/image/demo/slider_8.jpg" alt="banner1"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>*@
+
+                </aside>
+                <div id="content" class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="module tab-slider titleLine">
+                        <div class="module tab-slider titleLine animated wow slideInUP" data-wow-delay=".5s">
+                            <h3 class="modtitle">Sản Phẩm Nổi Bật</h3>
+                            <div id="so_listing_tabs_1" class="so-listing-tabs first-load module">
+                                <div class="loadeding"></div>
+                                <div class="ltabs-wrap">
+                                    <div class="ltabs-tabs-container" data-delay="300" data-duration="600"
+                                         data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="3" data-md="2"
+                                         data-sm="2" data-xs="1" data-margin="30">
+                                        <!--Begin Tabs-->
+                                        <div class="ltabs-tabs-wrap">
+                                            <span class="ltabs-tab-selected">Máy Lọc Nước </span> <span class="ltabs-tab-arrow">▼</span>
+                                            <div class="item-sub-cat">
+                                                <ul class="ltabs-tabs cf">
+                                                    <li class="ltabs-tab tab-sel" data-category-id="20"
+                                                        data-active-content=".items-category-20">
+                                                        <span class="ltabs-tab-label">Máy Lọc Nước </span>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- End Tabs-->
+                                    </div>
+                                    <div class="ltabs-items-container">
+                                        <!--Begin Items-->
+                                        <div class="ltabs-items ltabs-items-selected items-category-20 grid"
+                                             data-total="10">
+                                            <div class="ltabs-items-inner ltabs-slider ">
+                                                @foreach (var item in list1)
+                                                {
+                                                    <div class="ltabs-item product-layout">
+                                                        <div class="product-item-container">
+                                                            <div class="left-block">
+                                                                <div class="product-image-container second_img ">
+                                                                    <img src="~/Public/image/demo/@item.Image"
+                                                                         alt="@item.ProductName;" class="img-responsive" />
+                                                                    <img src="~/Public/image/demo/@item.Image"
+                                                                         alt="@item.ProductName;"
+                                                                         class="img_0 img-responsive" />
+                                                                </div>
+                                                                <!--Hot Label-->
+                                                                <span class="label label-sale">Hot</span>
+                                                                <!--full quick view block-->
+                                                                <a class="quickview iframe-link visible-lg"
+                                                                   data-fancybox-type="iframe" href="@Url.Action("Quickview","Product",new { id = item.ProductID })">
+                                                                    Xem Nhanh
+                                                                </a>
+                                                                <!--end full quick view block-->
+                                                            </div>
+                                                            <div class="right-block">
+                                                                <div class="caption">
+                                                                    <h4><a href="@Url.Action("DetailProduct","Product",new { id = item.ProductID })">@item.ProductName</a></h4>
+                                                                    <div class="ratings">
+                                                                        <div class="rating-box">
+                                                                            <span class="fa fa-stack">
+                                                                                <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                            </span>
+                                                                            <span class="fa fa-stack">
+                                                                                <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                            </span>
+                                                                            <span class="fa fa-stack">
+                                                                                <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                            </span>
+                                                                            <span class="fa fa-stack">
+                                                                                <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                            </span>
+                                                                            <span class="fa fa-stack">
+                                                                                <i class="fa fa-star-o fa-stack-1x"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="price">
+                                                                        @{int pricenew = (int)@item.PriceNew;
+
+                                                                        }
+                                                                        <span class="price-new">@pricenew.ToString("N0")</span>
+                                                                        <span class="price-old">@item.PriceOld</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="button-group">
+                                                                    <button class="addToCart" type="button"
+                                                                            data-toggle="tooltip" title="Add to Cart"
+                                                                            onclick="cart.add('@item.ProductID', '1' ,'@item.ProductName','@item.Image');">
+                                                                        <i class="fa fa-shopping-cart"></i> <span class="">Thêm Vào Giỏ Hàng</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div><!-- right block -->
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+
+                                        </div>
+                                        <!--End Items-->
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module tab-slider titleLine">
+                        <h3 class="modtitle">Sản Phẩm Mới</h3>
+                        <div id="so_listing_tabs_2" class="so-listing-tabs first-load module animated wow slideInUp" data-wow-delay=".5s">
+                            <div class="ltabs-wrap">
+                                <div class="ltabs-tabs-container" data-delay="300" data-duration="600"
+                                     data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="3" data-md="2"
+                                     data-sm="2" data-xs="1" data-margin="30">
+                                    <!--Begin Tabs-->
+                                    <div class="ltabs-tabs-wrap">
+                                        <span class="ltabs-tab-selected">Tất Cả Sản Phẩm </span> <span class="ltabs-tab-arrow">▼</span>
+                                        <div class="item-sub-cat">
+                                            <ul class="ltabs-tabs cf">
+                                                <li class="ltabs-tab tab-sel" data-category-id="20"
+                                                    data-active-content=".items-category-20">
+                                                    <span class="ltabs-tab-label">Tất Cả Sản Phẩm </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Tabs-->
+                            </div>
+                            <div class="ltabs-items-container">
+                                <!--Begin Items-->
+                                <div class="ltabs-items  ltabs-items-selected items-category-61 products-list grid" data-total="9">
+                                    <div class="ltabs-items-inner ltabs-slider ">
+                                        <div class="item-wrap">
+                                            <div class="row">
+                                                <div class="right-container">
+                                                    <div class="row">
+                                                        @foreach (var item in list3)
+                                                        {
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="ltabs-item product-layout ">
+                                                                    <div class="product-item-container">
+                                                                        <div class="left-block">
+                                                                            <div class="product-image-container second_img ">
+                                                                                <img src="~/Public/image/demo/@item.Image"
+                                                                                     alt="@item.ProductName;" class="img-responsive" />
+                                                                                <img src="~/Public/image/demo/@item.Image"
+                                                                                     alt="@item.ProductName;"
+                                                                                     class="img_0 img-responsive" />
+                                                                            </div>
+                                                                            <!--Sale Label-->
+                                                                            <span class="label label-new">New</span>
+                                                                            <!--full quick view block-->
+                                                                            <a class="quickview iframe-link visible-lg"
+                                                                               data-fancybox-type="iframe" href="@Url.Action("Quickview","Product",new { id = item.ProductID })">
+                                                                                Xem Nhanh
+                                                                            </a>
+                                                                            <!--end full quick view block-->
+                                                                        </div>
+                                                                        <div class="right-block">
+                                                                            <div class="caption">
+                                                                                <h4><a href="@Url.Action("DetailProduct","Product",new { id = item.ProductID })"> @item.ProductName </a></h4>
+                                                                                <div class="ratings">
+                                                                                    <div class="rating-box">
+                                                                                        <span class="fa fa-stack">
+                                                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                                        </span>
+                                                                                        <span class="fa fa-stack">
+                                                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                                        </span>
+                                                                                        <span class="fa fa-stack">
+                                                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                                        </span>
+                                                                                        <span class="fa fa-stack">
+                                                                                            <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                                                        </span>
+                                                                                        <span class="fa fa-stack">
+                                                                                            <i class="fa fa-star-o fa-stack-1x"></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="price">
+                                                                                    @{int pricenew = (int)@item.PriceNew;
+
+                                                                                    }
+                                                                                    <span class="price-new">@pricenew.ToString("N0")</span>
+                                                                                    <span class="price-old">@item.PriceOld</span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="button-group">
+                                                                                <button class="addToCart" type="button"
+                                                                                        data-toggle="tooltip" title="Add to Cart"
+                                                                                        onclick="cart.add('@item.ProductID', '1' ,'@item.ProductName','@item.Image');">
+                                                                                    <i class="fa fa-shopping-cart"></i> <span class="">Thêm Vào Giỏ Hàng</span>
+                                                                                </button>
+
+                                                                            </div>
+                                                                        </div><!-- right block -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--End Items-->
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Main Container -->
+    </div>
+
+
+    <script type="text/javascript">
+
+        var $typeheader = 'header-home2';
+
+    </script>
+    <!-- Social widgets -->
+</body>
+
+<!-- End Social widgets -->
+<script>
+    function search() {
+        var key = $('input[name="search"]').val();
+        alert(key);
+    }
+</script>

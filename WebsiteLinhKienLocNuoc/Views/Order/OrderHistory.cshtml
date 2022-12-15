@@ -1,0 +1,194 @@
+﻿
+@{
+    var lProssing = (List<WebsiteLinhKienLocNuoc.Models.Order>)ViewBag.lProssing;
+    var lShipped = (List<WebsiteLinhKienLocNuoc.Models.Order>)ViewBag.lShipped;
+    var lCompleted = (List<WebsiteLinhKienLocNuoc.Models.Order>)ViewBag.lCompleted;
+    var lCancelled = (List<WebsiteLinhKienLocNuoc.Models.Order>)ViewBag.lCancelled;
+    ViewBag.Title = "OrderHistory";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div class="main-container container">
+    <div class="row">
+        <aside class="col-sm-2" id="column-left">
+            <div class="module blog-category titleLine"> 
+                <h3 class="modtitle">Danh Mục</h3>
+                <div class="modcontent">
+                    <ul class="list-group ">
+                        <li class="list-group-item"> <a href="/Account/MyAccount" class="group-item">Thông Tin Tài Khoản</a></li>
+                        <li class="list-group-item"><a href="/Order/OrderHistory" class="group-item">Lịch Sử Mua Hàng</a></li>
+                        <li class="list-group-item"><a href="/Account/MyComment" class="group-item">Đánh Giá Của Tôi</a></li>
+                        <li class="list-group-item"><a href="/Account/ChangedPassword" class="group-item">Đổi Mật Khẩu</a></li>
+                        <li class="list-group-item"><a href="/Account/Logout" class="group-item">Đăng Xuất</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </aside>
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-10 ">
+            <h2 class="title">Lịch Sử Mua Hàng</h2>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab" href="#tab-1"> Chờ Xác Nhận </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#tab-2"> Đang Giao </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#tab-3"> Đã Giao </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#tab-4"> Đã Hủy </a>
+                </li>
+            </ul>
+            <div class="tab-content" style="min-height:300px">
+                <div class="tab-pane active" id="tab-1">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+
+                                    <td class="text-center">Mã Đơn Hàng</td>
+                                    <td class="text-center">Trạng Thái</td>
+                                    <td class="text-center">Ngày Đặt</td>
+                                    <td class="text-right">Tổng Tiền</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in lProssing)
+                            {
+
+                                <tbody>
+                                    <tr>
+
+                                        <td class="text-center">@item.OrderID</td>
+                                        <td class="text-center">Chờ Xác Nhận</td>
+                                        <td class="text-center">@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdd)</td>
+                                        @{int total = (int)(@item.Total);
+
+                                        }
+                                        <td class="text-right">@total.ToString("N0")</td>
+                                        <td class="text-center">
+                                            <a class="btn btn-info" title="" data-toggle="tooltip" href="/Order/OrderInformation?orderid=@item.OrderID" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+
+                                    <td class="text-center">Mã Đơn Hàng</td>
+                                    <td class="text-center">Trạng Thái</td>
+                                    <td class="text-center">Ngày Đặt</td>
+                                    <td class="text-right">Tổng Tiền</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in lShipped)
+                            {
+
+                                <tbody>
+                                    <tr>
+
+                                        <td class="text-center">@item.OrderID</td>
+                                        <td class="text-center">Đang Giao Hàng</td>
+                                        <td class="text-center">@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdd)</td>
+                                        @{int total = (int)(@item.Total);
+
+                                        }
+                                        <td class="text-right">@total.ToString("N0")</td>
+                                        <td class="text-center">
+                                            <a class="btn btn-info" title="" data-toggle="tooltip" href="/Order/OrderInformation?orderid=@item.OrderID" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+
+                                    <td class="text-center">Mã Đơn Hàng</td>
+                                    <td class="text-center">Trạng Thái</td>
+                                    <td class="text-center">Ngày Đặt</td>
+                                    <td class="text-right">Tổng Tiền</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in lCompleted)
+                            {
+
+                                <tbody>
+                                    <tr>
+
+                                        <td class="text-center">@item.OrderID</td>
+                                        <td class="text-center">Đã Giao Hàng</td>
+                                        <td class="text-center">@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdd)</td>
+                                        @{int total = (int)(@item.Total);
+
+                                        }
+                                        <td class="text-right">@total.ToString("N0")</td>
+                                        <td class="text-center">
+                                            <a class="btn btn-info" title="" data-toggle="tooltip" href="/Order/OrderInformation?orderid=@item.OrderID" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+
+                                    <td class="text-center">Mã Đơn Hàng</td>
+                                    <td class="text-center">Trạng Thái</td>
+                                    <td class="text-center">Ngày Đặt</td>
+                                    <td class="text-right">Tổng Tiền</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in lCancelled)
+                            {
+
+                                <tbody>
+                                    <tr>
+
+                                        <td class="text-center">@item.OrderID</td>
+                                        <td class="text-center">Đã Hủy</td>
+                                        <td class="text-center">@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdd)</td>
+                                        @{int total = (int)(@item.Total);
+
+                                        }
+                                        <td class="text-right">@total.ToString("N0")</td>
+                                        <td class="text-center">
+                                            <a class="btn btn-info" title="" data-toggle="tooltip" href="/Order/OrderInformation?orderid=@item.OrderID" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
