@@ -20,11 +20,20 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             Customer customer = cusDAO.GetLoginCustomer(useremail, userpassword);
             if (customer != null && customer.Prohibit == 1)
             {
-                if (customer.Access == 1 || customer.Access == 2)
+                if (customer.Access == 1)
                 {
                     Session["adminid"] = customer.CustomerID;
                     Session["username"] = customer.FirstName + customer.LastName;
                     return RedirectToAction("Index", "Dashboard");
+                } else if (customer.Access == 2)
+                {
+                    Session["adminid"] = customer.CustomerID;
+                    Session["username"] = customer.FirstName + customer.LastName;
+                    return RedirectToAction("Index", "DashboardStaff");
+                }
+                else
+                {
+                    TempData["Error"] = "Không phải tài khoản Admin";
                 }
             }
             return View();

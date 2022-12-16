@@ -1,0 +1,286 @@
+﻿
+@{
+    ViewBag.Title = "AddOrder";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage2.cshtml";
+    var Customer = (List<WebsiteLinhKienLocNuoc.Models.Customer>)ViewBag.Customers;
+    var Pay = (List<WebsiteLinhKienLocNuoc.Models.Payment>)ViewBag.Pays;
+    var Ship = (List<WebsiteLinhKienLocNuoc.Models.Shipping>)ViewBag.Ships;
+    List<WebsiteLinhKienLocNuoc.Models.Product> Products = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.Products;
+}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="page-title mb-0">Thêm Mới Đơn Hàng</h4>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="float-right d-none d-md-block">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary btn-rounded dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="ti-settings mr-1"></i> Settings
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <form method="GET" action="/OrderStaff/InsertAddOrder">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Thông Tin Người Mua</h4>
+                                <div class="form-group">
+                                    <label>Mã Khách Hàng</label>
+                                    <select class="form-control" name="customerid">
+                                        @foreach (var item in Customer)
+                                        {
+                                            <option value="@item.CustomerID">@item.FirstName @item.LastName</option>
+                                        }
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên Người Nhận</label>
+                                    <input class="form-control" type="text" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Số Điện Thoại</label>
+                                    <input class="form-control" type="text" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa Chỉ Người Nhận</label>
+                                    <input class="form-control" type="text" name="address" required>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title">Thông Tin Vận Chuyển</h4>
+                                <div class="form-group">
+                                    <label>Phương Thức Vận Chuyển</label>
+                                    <select class="form-control" name="shipping">
+                                        @foreach (var item in Ship)
+                                        {
+                                            <option value="@item.ShippingID">@item.ShippingName</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phương Thức Thanh Toán</label>
+                                    <select class="form-control" name="pay">
+                                        @foreach (var item in Pay)
+                                        {
+                                            <option value="@item.PaymentID">@item.PaymentName</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ghi Chú</label>
+                                    <div>
+                                        <textarea required class="form-control" rows="5" name="note"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- end col -->
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="ion-plus-circled"></i>&ensp;Thêm Sản Phẩm</button>
+                                <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title mt-0">Thêm Mới Sản Phẩm</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label"> Sản Phẩm</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control" id="select" onchange="getDataProduct(this);">
+                                                            @foreach (var item in Products)
+                                                            {
+                                                                <option value="@item.ProductID">@item.ProductName</option>
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-text-input" class="col-sm-3 col-form-label">Đơn Giá</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="number" value="@Products[0].PriceNew" id="price-input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Số Lượng</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="number" value="1" min="1" id="number-input">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-5"></div>
+                                                    <div class="col-sm-7 ">
+                                                        <button type="button" class="btn btn-success waves-effect waves-light" onclick="addProduct();">Thêm</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div>
+                                <h4></h4>
+                                <h4 class="mt-0 header-title">Danh Sách Sản Phẩm</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered mb-0" id="tableproduct">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Tên Sản Phẩm</th>
+                                                <th>Số Lượng</th>
+                                                <th>Đơn Giá</th>
+                                                <th>Thành Tiền</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td colspan="3">Tổng Tiền Sản Phẩm</td>
+                                                <td id="subtotal"></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td colspan="3">Phí Vận Chuyển</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td colspan="3">Tổng Cộng</td>
+                                                <td id="subtotol"></td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-5"></div>
+                                    <div class="col-sm-7 ">
+                                        <button type="submit" class="btn btn-success waves-effect waves-light" onclick="addProduct(response.productid);">Thêm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- end col -->
+                </div>
+
+            </form>
+        </div> <!-- container-fluid -->
+
+    </div> <!-- content -->
+</div>
+<script>
+    function getDataProduct(sel) {
+        $.ajax({
+            url: '/Admin/ProductStaff/GetPriceProduct/',
+            dataType: 'json',
+            data: { productid: sel.value },
+            type: 'POST',
+            success: function (response) {
+                if (response.status == true) {
+                    $('#price-input').attr('value', response.price);
+                }
+                else {
+
+                }
+            }
+        });
+    };
+    function addProduct() {
+        var productid = document.getElementById('select').value;
+        var price = document.getElementById('price-input').value;
+        var number = document.getElementById('number-input').value;
+        $.ajax({
+            url: '/Admin/OrderStaff/AddProductToOrder/',
+            dataType: 'json',
+            data: { productid: productid, number: number, price: price },
+            type: 'POST',
+            success: function (response) {
+                if (response.status == true) {
+                    if (response.method == "add") {
+
+                        $("#tableproduct > tbody").append("<tr id='tr_" + response.productid + "'><th scope='row'>" + response.productid + "</th><td>" + response.productname + "</td>"
+                            + "<td id='quantity_" + response.productid + "'>" + response.quantity + "</td><td>" + response.price + "</td><td id='temprice_" + response.productid + "'>" + response.subitemtotal + "</td>"
+                            + "<td><button type='button' class='btn btn-danger waves-effect waves-light' onclick='removeProduct(" + response.productid + ");'><i class='ion-close-circled'></i></button></td></tr>");
+                        document.getElementById("subtotal").innerHTML = response.subtotal;
+                        document.getElementById("subtotol").innerText = response.subtotal;
+                    }
+                    if (response.method == "exist") {
+                        document.getElementById("quantity_" + response.productid + "").innerHTML = response.quantity;
+                        document.getElementById("temprice_" + response.productid + "").innerHTML = response.temprice;
+                        document.getElementById("subtotal").innerHTML = response.subtotal;
+                        document.getElementById("subtotol").innerText = response.subtotal;
+                    }
+                }
+                else {
+
+                }
+            }
+        });
+    };
+    function removeProduct(productid) {
+        $.ajax({
+            url: '/Admin/OrderStaff/RemoveProductToOrder/',
+            dataType: 'json',
+            data: { id: productid },
+            type: 'POST',
+            success: function (response) {
+                if (response.status == true) {
+                    document.getElementById("tr_" + response.productid).remove();
+                    document.getElementById("subtotal").innerHTML = response.subtotal;
+                    document.getElementById("subtotol").innerText = response.subtotal;
+                }
+            }
+        });
+    };
+</script>

@@ -1,0 +1,195 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model List<Voucher>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+    var Customers = (List<WebsiteLinhKienLocNuoc.Models.Customer>)ViewBag.Customers;
+}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="ion-plus-circled"></i>&ensp;Thêm Voucher</button>
+                            <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mt-0">Thêm Voucher</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/Admin/VoucherAdmin/Add">
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Mã giảm giá</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="text" name="VoucherCode" id="text-input" placeholder="Mã giảm giá">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Người thêm</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control" name="CustomerID">
+                                                            @foreach (var item in Customers)
+                                                            {
+                                                                <option value="@item.CustomerID">@item.FirstName @item.LastName</option>
+                                                            }
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Giảm giá</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="text" name="SalePercent" id="text-input" placeholder="Giảm giá (10%)">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Giảm lớn nhất</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="text" name="MaximumDis" id="text-input" placeholder="Giảm lớn nhất (Vd: 50.000đ)">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-number-input" class="col-sm-3 col-form-label">Điều kiện đơn hàng</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="text" name="MiximunVal" id="text-input" placeholder="Điều kiện đơn hàng (Vd: 500.000đ)">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-5"></div>
+                                                    <div class="col-sm-7 ">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Thêm</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div>
+                            <h4 class="mt-0 header-title"><br />Danh Sách Voucher</h4>
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
+                                <thead>
+                                    <tr>
+                                        <th>Voucher</th>
+                                        <th>Mã Voucher</th>
+                                        <th>Người thêm</th>
+                                        <th>Giảm giá</th>
+                                        <th>Giảm lớn nhất</th>
+                                        <th>Điều kiện đơn hàng</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.VoucherID </td>
+                                            <td>@item.VoucherCode</td>
+                                            <td><a>@item.Customer.FirstName </a><a>@item.Customer.LastName</a></td>
+                                            <td>@item.SalePercent<a>%</a></td>
+                                            <td>@String.Format("{0:0,0}", @item.MaximumDis)<a>đ</a></td>
+                                            <td>@String.Format("{0:0,0}", @item.MiximunVal)<a>đ</a></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-update-modal-center-@item.VoucherID">Sửa</button>
+                                                    <div class="modal fade bs-update-modal-center-@item.VoucherID" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title mt-0">Sửa Voucher</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <form action="/Admin/VoucherAdmin/Edit">
+                                                                        <div class="form-group row hidden">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Voucher</label>
+                                                                            <div class="col-sm-9">
+                                                                                <input class="form-control" type="number" name="VoucherID" id="text-input" value="@item.VoucherID" placeholder="Voucher" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Mã Voucher</label>
+                                                                            <div class="col-sm-9">
+                                                                                <input class="form-control" type="text" name="VoucherCode" id="text-input" value="@item.VoucherCode" placeholder="Mã Voucher">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Người thêm</label>
+                                                                            <div class="col-sm-9">
+                                                                                <select class="form-control" name="CustomerID">
+                                                                                    @foreach (var item1 in Customers)
+                                                                                    {
+                                                                                        if (item1.CustomerID == item.CustomerID)
+                                                                                        {
+                                                                                            <option value="@item1.CustomerID" selected>@item1.FirstName @item1.LastName</option>
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            <option value="@item1.CustomerID">@item1.FirstName @item1.LastName</option>
+                                                                                        }
+                                                                                    }
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Giảm giá</label>
+                                                                            <div class="col-sm-9">
+                                                                                <input class="form-control" type="text" name="SalePercent" id="text-input" value="@item.SalePercent" placeholder="Giảm giá">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Giảm lớn nhất</label>
+                                                                            <div class="col-sm-9">
+                                                                                <input class="form-control" type="text" name="MaximumDis" id="text-input" value="@item.MaximumDis" placeholder="Giảm lớn nhất">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <label for="example-number-input" class="col-sm-3 col-form-label">Điều kiện đơn hàng</label>
+                                                                            <div class="col-sm-9">
+                                                                                <input class="form-control" type="text" name="MiximunVal" id="text-input" value="@item.MiximunVal" placeholder="Điều kiện đơn hàng">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row">
+                                                                            <div class="col-sm-5"></div>
+                                                                            <div class="col-sm-7 ">
+                                                                                <button type="submit" class="btn btn-success waves-effect waves-light">Lưu</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end row -->
+
+        </div>
+        <!-- container-fluid -->
+
+    </div>
+    <!-- content -->
+
+</div>
+<script>
+
+</script>
+
+

@@ -7,7 +7,7 @@ using WebsiteLinhKienLocNuoc.Models;
 
 namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
 {
-    public class ProductAdminController : Controller
+    public class ProductStaffController : Controller
     {
         private Product_DAO prDAO = new Product_DAO();
         private SubCategories_DAO scgDAO = new SubCategories_DAO();

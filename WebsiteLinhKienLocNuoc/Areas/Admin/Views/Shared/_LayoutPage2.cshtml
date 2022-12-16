@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="~/Areas/Admin/assets/images/favicon.ico">
 
     <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="~/Areas/Admin/plugins/morris/morris.css"> 
+    <link rel="stylesheet" href="~/Areas/Admin/plugins/morris/morris.css">
     <!-- Dropzone css -->
     <link href="~/Areas/Admin/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
     <!-- DataTables -->
@@ -91,7 +91,7 @@
                     <ul class="metismenu" id="side-menu">
                         <li class="menu-title">Trang Chính</li>
                         <li>
-                            <a href="/Admin/Dashboard/Index" class="waves-effect">
+                            <a href="/Admin/DashboardStaff/Index" class="waves-effect">
                                 <i class="dripicons-meter"></i> <span> Quản Lý </span>
                             </a>
                         </li>
@@ -99,51 +99,36 @@
                         <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span> Đơn Hàng <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                             <ul class="submenu">
-                                <li><a href="/Admin/OrderAdmin/Index">Danh Sách Đơn Hàng</a></li>
-                                <li><a href="/Admin/OrderAdmin/AddOrder">Thêm Mới Đơn Hàng</a></li>
-                                <li><a href="/Admin/OrderAdmin/Approve">Phê Duyệt Đơn Hàng</a></li>
+                                <li><a href="/Admin/OrderStaff/Index">Danh Sách Đơn Hàng</a></li>
+                                <li><a href="/Admin/OrderStaff/AddOrder">Thêm Mới Đơn Hàng</a></li>
+                                <li><a href="/Admin/OrderStaff/Approve">Phê Duyệt Đơn Hàng</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-briefcase"></i> <span>Sản Phẩm<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
                             <ul class="submenu">
-                                <li><a href="/Admin/ProductAdmin/Index">Danh Sách Sản Phẩm</a></li>
-                                <li><a href="/Admin/ProductAdmin/AddProduct">Thêm Sản Phẩm</a></li>
+                                <li><a href="/Admin/ProductStaff/Index">Danh Sách Sản Phẩm</a></li>
+                                <li><a href="/Admin/ProductStaff/AddProduct">Thêm Sản Phẩm</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-cart"></i> <span>Voucher<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
                             <ul class="submenu">
-                                <li><a href="/Admin/VoucherAdmin/Index">Danh Sách Voucher</a></li>
+                                <li><a href="/Admin/VoucherStaff/Index">Danh Sách Voucher</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-list"></i> <span>Danh Mục <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span> </a>
                             <ul class="submenu">
-                                <li><a href="/Admin/CategoriesAdmin/Index">Danh Sách Danh Mục</a></li>
+                                <li><a href="/Admin/CategoriesStaff/Index">Danh Sách Danh Mục</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-view-list-large"></i><span>Danh Mục Nhỏ<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                             <ul class="submenu">
-                                <li><a href="/Admin/SubCategoriesAdmin/Index">Danh Sách Danh Mục Nhỏ</a></li>
+                                <li><a href="/Admin/SubCategoriesStaff/Index">Danh Sách Danh Mục Nhỏ</a></li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-user"></i><span>Khách Hàng<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="/Admin/CustomerAdmin/Index">Danh Sách Khách Hàng</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-lock"></i><span>Tài Khoản<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="/Admin/CustomerAdmin/Account">Danh Sách Tài Khoản</a></li>
-                                <li><a href="/Admin/CustomerAdmin/AddAccount">Thêm Tài Khoản</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
 
                 </div>

@@ -39,13 +39,18 @@
                         <h4 class="font-18 mt-3 m-b-5">Welcome Back !</h4>
                         <p class="text-muted">Sign in to continue to LinhKienMTA</p>
                     </div>
-                    <a class="logo-admin"><img src="~/Areas/Admin/assets/images/logo_dark.png" height="26" alt="logo"></a>
+                    <a class="logo-admin"><img src="~/Public/image/demo/Logonew.gif" height="25" alt="logo"></a>
                 </div>
 
                 <div class="p-3">
 
                     <form class="form-horizontal m-t-10" method="post" action="/Admin/AccountAdmin/Login">
-
+                        @if (TempData["Error"] != null)//kiểm tra thông báo để hiển thị
+                        {
+                            <div id="alert" class="alert alert-danger">
+                                <i class="fa fa-exclamation-circle"></i>Thất bại : @TempData["Error"]
+                            </div>
+                        }
                         <div class="form-group">
                             <label for="username">Email</label>
                             <input type="email" class="form-control" name="useremail" placeholder="Enter useremail">
