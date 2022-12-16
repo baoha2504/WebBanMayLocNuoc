@@ -30,7 +30,9 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
 
                ViewBag.Order = orders1.Count();
                ViewBag.Order2 = orders2.Count();
-               ViewBag.Customers = cusDAO.GetListCustomer().Count();
+               ViewBag.Customers = cusDAO.GetListCustomer3().Count();
+               ViewBag.Staff = cusDAO.GetListCustomer2().Count();
+               ViewBag.Admin = cusDAO.GetListCustomer1().Count();
                ViewBag.Products = proDAO.GetProduct().Count();
                return View();
           }

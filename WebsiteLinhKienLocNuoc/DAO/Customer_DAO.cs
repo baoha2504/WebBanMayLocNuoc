@@ -86,7 +86,21 @@ namespace WebsiteLinhKienLocNuoc.DAO
                List<Customer> cus = cn.ConvertToList<Customer>(tb);
                return cus;
           }
-          public List<Customer> GetListCustomer2()
+        public List<Customer> GetListCustomer1()
+        {
+            string query = "select * from Customer where access =1 ";
+            DataTable tb = cn.LoadTable(query);
+            List<Customer> cus = cn.ConvertToList<Customer>(tb);
+            return cus;
+        }
+        public List<Customer> GetListCustomer2()
+        {
+            string query = "select * from Customer where access =2 ";
+            DataTable tb = cn.LoadTable(query);
+            List<Customer> cus = cn.ConvertToList<Customer>(tb);
+            return cus;
+        }
+        public List<Customer> GetListCustomer3()
           {
                string query = "select * from Customer where access =3 ";
                DataTable tb = cn.LoadTable(query);
