@@ -21,13 +21,24 @@ namespace WebsiteLinhKienLocNuoc.DAO
             DataTable tb = cn.LoadTable(query);
             return tb;
         }
-        public Product GetVoucherByID(int? id)
+
+        public Voucher GetVoucherByCode(string code)
+        {
+            string query = "select * from Voucher Where VoucherCode = @code";
+            string[] para = new string[1] { "@code" };
+            object[] value = new object[1] { code };
+            DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
+            Voucher sp = cn.ConvertToList<Voucher>(tb).FirstOrDefault();
+            return sp;
+        }
+
+        public Voucher GetVoucherByID(int? id)
         {
             string query = "select * from Voucher Where VoucherID = @id";
             string[] para = new string[1] { "@id" };
             object[] value = new object[1] { id };
             DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
-            Product sp = cn.ConvertToList<Product>(tb).FirstOrDefault();
+            Voucher sp = cn.ConvertToList<Voucher>(tb).FirstOrDefault();
             return sp;
         }
 

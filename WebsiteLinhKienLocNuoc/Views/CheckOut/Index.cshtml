@@ -128,24 +128,32 @@
                         <div class="col-sm-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><i class="fa fa-ticket"></i> Bạn có mã giảm giá hoặc khuyến mãi?</h4>
+                                    <h4 class="panel-title"><i class="fa fa-ticket"></i> Bạn có khuyến mãi?</h4>
                                 </div>
                                 <div class="panel-body row">
-                                    <div class="col-sm-6 ">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value="" name="coupon">
-                                            <span class="input-group-btn">
-                                                <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Nhập mã giảm giá">
-                                            </span>
+                                    @*<div class="col-sm-6 ">
+                                         <div class="input-group">
+                                                <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value="" name="coupon">
+                                                   <span class="input-group-btn">
+                                                    <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Nhập mã giảm giá">
+                                                   </span>
+                                         </div>
+                                    </div>*@
+                                    @if (TempData["Error"] != null)//kiểm tra thông báo để hiển thị
+                                    {
+                                        <div id="alert" class="alert alert-danger">
+                                            <i class="fa fa-exclamation-circle"></i>Thất bại : @TempData["Error"]
                                         </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
+                                    }
+                                    <div class="col-sm-12">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="input-voucher" placeholder="Enter your gift voucher code here" value="" name="voucher">
-                                            <span class="input-group-btn">
-                                                <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Nhập mã khuyến mãi">
-                                            </span>
+                                            <form action="/CheckOut/CheckDiscount">
+                                                <input type="text" class="form-control" id="input-voucher" placeholder="Enter your gift voucher code here" value="" name="voucher">
+                                                <span class="input-group-btn">
+                                                    <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Nhập mã khuyến mãi">
+                                                </span>
+                                                <input class="hidden" name="pricecheck" value="@ViewBag.CartTotal">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -207,12 +215,14 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="text-right" colspan="6"><strong>Giảm giá:</strong></td>
-                                                    <td class="text-right">0</td>
+                                                    <td class="discount1">-@ViewBag.Discount</td>
                                                 </tr>
 
                                                 <tr>
                                                     <td class="text-right" colspan="6"><strong>Tổng Cộng:</strong></td>
                                                     <td id="TotalOrder" class="text-right">@Total.ToString("N0")</td>
+                                                @*<td id="TotalOrder" class="text-right">@ViewBag.PriceAfterDiscount</td>*@
+
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -232,7 +242,12 @@
 
                                     <div class="buttons">
                                         <div class="pull-right">
-                                            <button class="btn btn-primary" type="button" onclick="order(@ViewBag.CartTotal);">
+                                            @*<button class="btn btn-primary" type="button" onclick="order(@ViewBag.CartTotal);">
+                                                <span class="">Xác nhận đặt hàng</span>
+                                            </button>*@
+                                            
+                                            <input type="text" class="hidden" id="discount" placeholder="Discount" value="@ViewBag.Discount" name="Discount">
+                                            <button class="btn btn-primary" type="button" onclick="order( @ViewBag.PriceAfterDiscount);">
                                                 <span class="">Xác nhận đặt hàng</span>
                                             </button>
                                         </div>
@@ -261,14 +276,14 @@
         });
         var value1 = $('input[id=ship]:checked').val();
         if (value1 == 2) {
-            var Total = @ViewBag.CartTotal;
+            var Total = @ViewBag.PriceAfterDiscount;
             Total += 30000;
             var sTotal = Total.toString();
             document.getElementById("TotalOrder").innerText = format(sTotal);
             document.getElementById("shipfees").innerText = '30,000';
         }
         else if (value1 == 1) {
-            var Total = @ViewBag.CartTotal;
+            var Total = @ViewBag.PriceAfterDiscount;
             document.getElementById("TotalOrder").innerText  = format(Total);
             document.getElementById("shipfees").innerText  = '0';
         }
@@ -291,11 +306,12 @@
         var name = $('input[name="firstname"]').val() +' '+$('input[name="lastname"]').val();
         alert(name);
         var phone = $('input[name="telephone"]').val();
-        var comment = $('textarea[id=confirm_comment]').val();        
+        var comment = $('textarea[id=confirm_comment]').val(); 
+        var discount = $('input[id="discount"]').val();
         $.ajax({
             url: '/CheckOut/Payment/',
             dataType: 'json',
-            data: { shipid: value1, paymentid: value2, shipadd: shippingadd, total: Totalorder, note: comment, name: name, phone: phone },
+            data: { shipid: value1, paymentid: value2, shipadd: shippingadd, discounting: discount,  total: Totalorder, note: comment, name: name, phone: phone },
                 type: 'POST',
                 success: function (response) {
                     if (response.status == true) {
