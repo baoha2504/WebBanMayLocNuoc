@@ -35,6 +35,9 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
                 {
                     TempData["Error"] = "Không phải tài khoản Admin";
                 }
+            } else
+            {
+                TempData["Error"] = "Email hoặc mật khẩu sai";
             }
             return View();
         }
