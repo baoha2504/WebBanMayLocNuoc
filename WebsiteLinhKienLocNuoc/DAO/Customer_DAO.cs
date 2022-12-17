@@ -11,7 +11,18 @@ namespace WebsiteLinhKienLocNuoc.DAO
      public class Customer_DAO
      {
           private Connection cn = new Connection();
-          public Customer GetCustomerbyID(int? id)
+        public List<Customer> GetCustomer()
+        {
+            List<Customer> lst = cn.ConvertToList<Customer>(GetDataCustomers());
+            return lst;
+        }
+        public DataTable GetDataCustomers()
+        {
+            string query = "select * from Customer where Access < 3";
+            DataTable tb = cn.LoadTable(query);
+            return tb;
+        }
+        public Customer GetCustomerbyID(int? id)
           {
                string query = "select * from Customer where CustomerID = @id";
                string[] para = new string[1] { "@id" };
