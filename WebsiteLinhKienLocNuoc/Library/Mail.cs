@@ -7,8 +7,8 @@ namespace WebsiteLinhKienLocNuoc.Library
 {
      public class Mail
      {
-          public static string email = "hacongquoclun1@gmail.com";
+          public static string email = "daoviethaanhttt@gmail.com";
           //pass email
-          public static string password = "8775132aa"; 
+          public static string password = "daovietha206001"; 
      }
 }

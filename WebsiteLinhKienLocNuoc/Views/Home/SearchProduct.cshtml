@@ -29,19 +29,19 @@
                                             <legend>Danh Mục</legend>
                                             <ul class="checkboxes_list">
                                                 <li>
-                                                    <input type="checkbox" checked="" name="category_1" id="category_1" value="1">
+                                                    <input type="checkbox" name="category" id="category_1" value="1">
                                                     <label for="category_1">Máy Lọc Nước</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_2" id="category_2" value="2">
+                                                    <input type="checkbox" name="category" id="category_2" value="2">
                                                     <label for="category_2">Lõi Lọc Nước</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_3" id="category_3" value="3">
+                                                    <input type="checkbox" name="category" id="category_3" value="3">
                                                     <label for="category_3">Cốc Lọc</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_4" id="category_4" value="4">
+                                                    <input type="checkbox" name="category" id="category_4" value="4">
                                                     <label for="category_4">Màng Lọc</label>
                                                 </li>
 
@@ -55,19 +55,19 @@
                                             <legend>Danh Mục</legend>
                                             <ul class="checkboxes_list">
                                                 <li>
-                                                    <input type="checkbox" checked="" name="category_5" id="category_5" value="5">
+                                                    <input type="checkbox"  name="category" id="category_5" value="5">
                                                     <label for="category_5">Bình Áp</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_6" id="category_6" value="6">
+                                                    <input type="checkbox" name="category" id="category_6" value="6">
                                                     <label for="category_6">Electronics</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_7" id="category_7" value="7">
+                                                    <input type="checkbox" name="category" id="category_7" value="7">
                                                     <label for="category_7">Van</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="category_8" id="category_8" value="8">
+                                                    <input type="checkbox" name="category" id="category_8" value="8">
                                                     <label for="category_8">Sản Phẩm Khác</label>
                                                 </li>
 
@@ -83,15 +83,15 @@
                                             <legend>Nhãn Hiệu</legend>
                                             <ul class="checkboxes_list">
                                                 <li>
-                                                    <input type="checkbox" checked="" name="brand_1" id="brand_1" value="Kangaroo">
+                                                    <input type="checkbox"  name="brand" id="brand_1" value="Kangaroo">
                                                     <label for="brand_1">Kangaroo</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="brand_2" id="brand_2" value="Karofi">
+                                                    <input type="checkbox" name="brand" id="brand_2" value="Karofi">
                                                     <label for="brand_2">Karofi</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="brand_3" id="brand_3" value="RO">
+                                                    <input type="checkbox" name="brand" id="brand_3" value="RO">
                                                     <label for="brand_3">RO</label>
                                                 </li>
 
@@ -123,13 +123,13 @@
                                 </div><!--/ .table_row -->
                                 <footer class="bottom_box">
                                     <div class="buttons_row">
-                                        <button type="submit" class="button_grey button_submit">Search</button>
+                                        <button type="submit" class="button_grey button_submit" onclick="AdvancedSearch();">Search</button>
                                         <button type="reset" class="button_grey ">Reset</button>
                                     </div>
                                 </footer>
                             </div><!--/ .table_layout -->
                         </form>
-                    </div>
+                    </div>""
 
                 </div>
 
@@ -278,3 +278,16 @@
     </div>
     <!--Middle Part End-->
 </div>
+<script>
+
+    function AdvancedSearch() {
+        var choices = [];
+        var els = document.getElementsByName('category');
+        for (var i = 0; i < els.length; i++) {
+            if (els[i].checked) {
+                choices.push(els[i].value);
+            }
+        }
+        alert(choices.length);
+    }
+</script>

@@ -94,11 +94,9 @@
                         }
                     </tbody>
                     <tfoot>
-                        @{int sub_total = (int)@Model.Total - (int)@Model.ShippingFee + (int)Model.Discount;
+                        @{int sub_total = (int)@Model.Total - (int)@Model.ShippingFee;
                             int ship = (int)@Model.ShippingFee;
-                            int discount = (int)Model.Discount;
-                            int totalorder = (int)@Model.Total;
-                            }
+                            int totalorder = (int)@Model.Total;}
                         <tr>
                             <td colspan="5"></td>
                             <td class="text-right">
@@ -120,7 +118,7 @@
                             <td class="text-right">
                                 <b>Giảm giá</b>
                             </td>
-                            <td class="text-right">-@discount.ToString("N0")</td>
+                            <td class="text-right">0</td>
 
                         </tr>
                         <tr>

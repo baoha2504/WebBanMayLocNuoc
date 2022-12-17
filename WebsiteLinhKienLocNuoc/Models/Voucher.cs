@@ -11,8 +11,6 @@ namespace WebsiteLinhKienLocNuoc.Models
     {
         public int VoucherID { get; set; }
 
-        public string VoucherCode { get; set; }
-
         public int? CustomerID { get; set; }
 
         public int? SalePercent { get; set; }
