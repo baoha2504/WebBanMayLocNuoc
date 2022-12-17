@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Linh Kiện Lọc Nước MTA</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App Icons -->
+    <link rel="shortcut icon" href="~/Areas/Admin/assets/images/favicon.ico">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="~/Areas/Admin/plugins/morris/morris.css"> 
+    <!-- Dropzone css -->
+    <link href="~/Areas/Admin/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+    <!-- DataTables -->
+    <link href="~/Areas/Admin/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Admin/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="~/Areas/Admin/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Alertify css -->
+    <link href="~/Areas/Admin/plugins/alertify/css/alertify.css" rel="stylesheet" type="text/css">
+    <!-- Sweet Alert -->
+    <link href="~/Areas/Admin/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Basic Css files -->
+    @Styles.Render("~/Areas/Admin/assets/css/bootstrap.min.css")
+    @Styles.Render("~/Areas/Admin/assets/css/metismenu.min.css")
+    @Styles.Render("~/Areas/Admin/assets/css/icons.css")
+    @Styles.Render("~/Areas/Admin/assets/css/style.css")
+</head>
+<body class="fixed-left">
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="/Admin/Dashboard/Index" class="logo">
+                    <img src="~/Public/image/demo/Logonew.gif" alt="" height="46" class="logo-large" style="margin-top: -20px">
+                    @*<img src="~/Public/image/demo/Logonew.gif" alt="" height="22" class="logo-sm">*@
+                </a>
+            </div>
+
+            <nav class="navbar-custom">
+                <ul class="navbar-right d-flex list-inline float-right mb-0">
+                    <!-- User-->
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="~/Areas/Admin/assets/images/users/avatar-6.jpg" alt="user" class="rounded-circle">
+                            <input id="sessionid" value="@Session["username"]" hidden>
+                            <span class="d-none d-md-inline-block ml-1">@Session["username"] <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
+                            <a class="dropdown-item" href="/Admin/AccountAdmin/ChangePassword"><i class="dripicons-user text-muted"></i> Đổi Mật Khẩu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/Admin/AccountAdmin/Logout"><i class="dripicons-exit text-muted"></i> Đăng Xuất</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Trang Chính</li>
+                        <li>
+                            <a href="/Admin/Dashboard/Index" class="waves-effect">
+                                <i class="dripicons-meter"></i> <span> Quản Lý </span>
+                            </a>
+                        </li>
+                        <li class="menu-title">Danh Mục</li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span> Đơn Hàng <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/OrderAdmin/Index">Danh Sách Đơn Hàng</a></li>
+                                <li><a href="/Admin/OrderAdmin/AddOrder">Thêm Mới Đơn Hàng</a></li>
+                                <li><a href="/Admin/OrderAdmin/Approve">Phê Duyệt Đơn Hàng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-briefcase"></i> <span>Sản Phẩm<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/ProductAdmin/Index">Danh Sách Sản Phẩm</a></li>
+                                <li><a href="/Admin/ProductAdmin/AddProduct">Thêm Sản Phẩm</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-cart"></i> <span>Voucher<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/VoucherAdmin/Index">Danh Sách Voucher</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-list"></i> <span>Danh Mục <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span> </a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/CategoriesAdmin/Index">Danh Sách Danh Mục</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-view-list-large"></i><span>Danh Mục Nhỏ<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/SubCategoriesAdmin/Index">Danh Sách Danh Mục Nhỏ</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-user"></i><span>Khách Hàng<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/CustomerAdmin/Index">Danh Sách Khách Hàng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-lock"></i><span>Tài Khoản<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="/Admin/CustomerAdmin/Account">Danh Sách Tài Khoản</a></li>
+                                <li><a href="/Admin/CustomerAdmin/AddAccount">Thêm Tài Khoản</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        @RenderBody()
+
+    </div>
+    <!-- jQuery  -->
+    @Scripts.Render("~/Areas/Admin/assets/js/jquery.min.js")
+    @Scripts.Render("~/Areas/Admin/assets/js/bootstrap.bundle.min.js")
+    @Scripts.Render("~/Areas/Admin/assets/js/modernizr.min.js")
+    @Scripts.Render("~/Areas/Admin/assets/js/metisMenu.min.js")
+    @Scripts.Render("~/Areas/Admin/assets/js/jquery.slimscroll.js")
+    @Scripts.Render("~/Areas/Admin/assets/js/waves.js")
+    @Scripts.Render("~/Areas/Admin/plugins/peity-chart/jquery.peity.min.js")
+    <!--Morris Chart-->
+    @Scripts.Render("~/Areas/Admin/plugins/morris/morris.min.js")
+    @Scripts.Render("~/Areas/Admin/plugins/raphael/raphael-min.js")
+    @Scripts.Render("~/Areas/Admin/assets/pages/dashboard.js")
+    <!-- Required datatable js -->
+    <script src="~/Areas/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="~/Areas/Admin/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/jszip.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/pdfmake.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/vfs_fonts.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/buttons.print.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="~/Areas/Admin/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/Areas/Admin/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="~/Areas/Admin/assets/pages/datatables.init.js"></script>
+    <!-- Alertify js -->
+    <script src="~/Areas/Admin/plugins/alertify/js/alertify.js"></script>
+    <script src="~/Areas/Admin/assets/pages/alertify-init.js"></script>
+    <!--Wysiwig js-->
+    <script src="~/Areas/Admin/plugins/tinymce/tinymce.min.js"></script>
+    <script src="~/Areas/Admin/plugins/dropzone/dist/dropzone.js"></script>
+    <script src="~/Areas/Admin/plugins/sweet-alert2/sweetalert2.min.js"></script>
+    <script src="~/Areas/Admin/assets/pages/sweet-alert.init.js"></script>
+    <!-- Format Number -->
+    <script src="~/Areas/Admin/assets/js/formatnumber.js"></script>
+    <!-- Parsley js -->
+    <script src="~/Areas/Admin/plugins/parsleyjs/parsley.min.js"></script>
+
+    <!-- App js -->
+    @Scripts.Render("~/Areas/Admin/assets/js/app.js")
+    <script>
+        //window.onload = function () {
+        //    var sessionid = this.document.getElementById('sessionid').value;
+        //    if (sessionid == '') {
+        //        window.location.href = "/Admin/AccountAdmin/Login"
+        //    }
+        //}
+        $(document).ready(function () {
+            $('form').parsley();
+            var sessionid = $('input[id=sessionid]').val();
+            if (sessionid == '') {
+                window.location.href = "/Admin/AccountAdmin/Login"
+            }
+        });
+    </script>
+</body>
+</html>

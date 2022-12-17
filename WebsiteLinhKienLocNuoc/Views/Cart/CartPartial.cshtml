@@ -1,0 +1,91 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model List<Cart>
+@{
+    var list1 = (List<WebsiteLinhKienLocNuoc.Models.Cart_item>)ViewBag.list;
+    Layout = null;
+}
+<head>
+    <style>
+        .overflow-auto1 {
+            height: 200px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style> 
+</head>
+<body>
+    <div id="cart" class=" btn-group btn-shopping-cart ">
+        <a data-loading-text="Loading..." class="top_cart dropdown-toggle"
+           data-toggle="dropdown">
+            <div class="shopcart" style="padding-top: 5px;">
+                <span class="handle pull-left"></span>
+                <span class="title">Giỏ Hàng </span>
+                <p id="cartnum" class="text-shopping-cart cart-total-full">@ViewBag.CartNum sản phẩm</p>
+            </div>
+        </a>
+
+        <ul class="tab-content content dropdown-menu pull-right shoppingcart-box " role="menu">
+            <li>
+                <table id="tablesession" class="table table-striped ">
+                    <tbody>
+                        @if (list1 != null)
+                        {
+                            foreach (var item in list1)
+                            {
+                                <tr id="tr_@item.ProductID">
+                                    <td class="text-center" style="width:70px">
+                                        <a href="product.html">
+                                            <img src="~/Public/image/demo/@item.product.Image"
+                                                 style="width:70px" alt="Filet Mign" title="Filet Mign"
+                                                 class="preview">
+                                        </a>
+                                    </td>
+                                    <td class="text-left">
+                                        <a class="cart_product_name"
+                                           href="product.html">@item.product.ProductName</a>
+                                    </td>
+                                    <td id="quantity_@item.ProductID" class="text-center"> @item.Quantity </td>
+                                    @{int pricenew = (int)@item.product.PriceNew;}
+
+                                    <td class="text-center"> @pricenew.ToString("N0") </td>
+                                    <td class="text-right">
+                                        <a onclick="cart.remove(@item.ProductID);"
+                                           class="fa fa-times fa-delete"></a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <div>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <strong>Tổng Sản Phẩm</strong>
+                                </td>
+                                @{int Total = (int)@ViewBag.CartTotal;}
+                                <td id="subtotal" class="text-right">@Total.ToString("N0")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-right">
+                        <a class="btn view-cart" href="/Cart/Index">
+                            <i class="fa fa-shopping-cart"></i>Xem Giỏ Hàng
+                        </a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-mega checkout-cart" href="/CheckOut/Index">
+                            <i class="fa fa-share"></i>Thanh Toán
+                        </a>
+                    </p>
+
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+

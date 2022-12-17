@@ -1,0 +1,280 @@
+﻿@model PagedList.IPagedList<WebsiteLinhKienLocNuoc.Models.Product>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "SearchProduct";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    var list1 = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.lst1;
+}
+
+
+<div class="main-container container">
+
+
+    <div class="row">
+
+        <!--Middle Part Start-->
+        <div id="content" class="col-md-12 col-sm-12"> 
+            <div class="products-category">
+                <!--Content Top -->
+                <div class="module latest-product titleLine">
+                    <h3 class="modtitle">Tìm Kiếm Nâng Cao </h3>
+                    <div class="modcontent ">
+                        <form class="type_2" method="GET" action="/Home/AdvancedSearch">
+
+                            <div class="table_layout filter-row">
+                                <div class="table_row"> 
+                                    <!-- - - - - - - - - - - - - - SUB CATEGORY - - - - - - - - - - - - - - - - -->
+                                    <div class="table_cell">
+                                        <fieldset>
+                                            <legend>Danh Mục</legend>
+                                            <ul class="checkboxes_list">
+                                                <li>
+                                                    <input type="checkbox" checked="" name="category_1" id="category_1" value="1">
+                                                    <label for="category_1">Máy Lọc Nước</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_2" id="category_2" value="2">
+                                                    <label for="category_2">Lõi Lọc Nước</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_3" id="category_3" value="3">
+                                                    <label for="category_3">Cốc Lọc</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_4" id="category_4" value="4">
+                                                    <label for="category_4">Màng Lọc</label>
+                                                </li>
+
+                                            </ul>
+
+                                        </fieldset>
+
+                                    </div>
+                                    <div class="table_cell">
+                                        <fieldset>
+                                            <legend>Danh Mục</legend>
+                                            <ul class="checkboxes_list">
+                                                <li>
+                                                    <input type="checkbox" checked="" name="category_5" id="category_5" value="5">
+                                                    <label for="category_5">Bình Áp</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_6" id="category_6" value="6">
+                                                    <label for="category_6">Electronics</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_7" id="category_7" value="7">
+                                                    <label for="category_7">Van</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category_8" id="category_8" value="8">
+                                                    <label for="category_8">Sản Phẩm Khác</label>
+                                                </li>
+
+                                            </ul>
+
+                                        </fieldset>
+
+                                    </div><!--/ .table_cell -->
+                                    <!-- - - - - - - - - - - - - - End SUB CATEGORY - - - - - - - - - - - - - - - - -->
+                                    <!-- - - - - - - - - - - - - - Manufacturer - - - - - - - - - - - - - - - - -->
+                                    <div class="table_cell">
+                                        <fieldset>
+                                            <legend>Nhãn Hiệu</legend>
+                                            <ul class="checkboxes_list">
+                                                <li>
+                                                    <input type="checkbox" checked="" name="brand_1" id="brand_1" value="Kangaroo">
+                                                    <label for="brand_1">Kangaroo</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="brand_2" id="brand_2" value="Karofi">
+                                                    <label for="brand_2">Karofi</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="brand_3" id="brand_3" value="RO">
+                                                    <label for="brand_3">RO</label>
+                                                </li>
+
+                                            </ul>
+
+                                        </fieldset>
+
+                                    </div><!--/ .table_cell -->
+                                    <!-- - - - - - - - - - - - - - End manufacturer - - - - - - - - - - - - - - - - -->
+                                    <!-- - - - - - - - - - - - - - Price - - - - - - - - - - - - - - - - -->
+                                    <div class="table_cell">
+                                        <fieldset>
+                                            <legend>Price</legend>
+                                            <div class="range">
+                                                Range :
+                                                <span class="min_val">$188.73</span> -
+                                                <span class="max_val">$335.15</span>
+                                                <input type="hidden" name="valuemin" class="min_value" value="188.73">
+                                                <input type="hidden" name="valuemax" class="max_value" value="335.15">
+                                            </div>
+                                            <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                                <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                                                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                                            </div>
+                                        </fieldset>
+                                    </div><!--/ .table_cell -->
+                                    <!-- - - - - - - - - - - - - - End price - - - - - - - - - - - - - - - - -->
+                                </div><!--/ .table_row -->
+                                <footer class="bottom_box">
+                                    <div class="buttons_row">
+                                        <button type="submit" class="button_grey button_submit">Search</button>
+                                        <button type="reset" class="button_grey ">Reset</button>
+                                    </div>
+                                </footer>
+                            </div><!--/ .table_layout -->
+                        </form>
+                    </div>
+
+                </div>
+
+                <!--Content Top End -->
+                <!-- Filters -->
+                <div class="product-filter filters-panel">
+                    <div class="row col-sm-offset-5">
+                        <div class="form-group" style="margin: 7px 10px">Kết quả tìm thấy @ViewBag.numResult sản phẩm</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 visible-lg">
+                            <div class="view-mode">
+                                <div class="list-view">
+                                    <button class="btn btn-default grid active" data-view="grid" data-toggle="tooltip" data-original-title="Grid"><i class="fa fa-th"></i></button>
+                                    <button class="btn btn-default list " data-view="list" data-toggle="tooltip" data-original-title="List"><i class="fa fa-th-list"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-by-show form-inline text-right col-md-7 col-sm-8 col-xs-12">
+                            <div class="form-group short-by">
+                                <label class="control-label" for="input-sort">Sort By:</label>
+                                <select id="input-sort" class="form-control"
+                                        onchange="location = this.value;">
+                                    <option value="" selected="selected">Default</option>
+                                    <option value="">Name (A - Z)</option>
+                                    <option value="">Name (Z - A)</option>
+                                    <option value="">Price (Low &gt; High)</option>
+                                    <option value="">Price (High &gt; Low)</option>
+                                    <option value="">Rating (Highest)</option>
+                                    <option value="">Rating (Lowest)</option>
+                                    <option value="">Model (A - Z)</option>
+                                    <option value="">Model (Z - A)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-pagination col-md-3 col-sm-4 col-xs-12 text-right">
+                            <ul class="pagination">
+                                <li>
+                                    @{
+                                        var firstPage = 1;
+                                        if ((int)Model.PageNumber > 1)
+                                        {
+                                            firstPage = (int)Model.PageNumber - 1;
+                                        }
+
+                                        var lastpage = Model.PageNumber;
+                                        if (lastpage < Model.PageCount)
+                                        {
+                                            lastpage = (int)Model.PageNumber + 1;
+                                        }
+                                        <a href="~/Home/SearchProduct?key=@ViewBag.key&page=@firstPage" class="page-link text-secondary ">
+                                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                        </a>
+                                    }
+                                </li>
+                                @for (int i = Model.PageNumber; i <= Model.PageCount; i++)
+                                {
+
+                                    if (i < Model.PageNumber + 5)
+                                    {
+                                        <li id="active_@i"><a href="~/Home/SearchProduct?key=@ViewBag.key&page=@i" class="page-link text-secondary">@i  </a></li>
+                                    }
+
+                                }
+                                <li>
+                                    <a href="~/Home/SearchProduct?key=@ViewBag.key&page=@lastpage" class="page-link text-secondary">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="~/Home/SearchProduct?key=@ViewBag.key&page=Model.PageCount" class="page-link text-secondary">
+                                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- //end Filters -->
+                <!--changed listings-->
+                <div class="products-list row grid">
+                     @foreach (var item in Model) {
+                            <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="product-item-container">
+                                    <div class="left-block">
+                                        <div class="product-image-container second_img ">
+                                            <img src="~/Public/image/demo/@item.Image"
+                                                 alt="@item.ProductName;" class="img-responsive" />
+                                            <img src="~/Public/image/demo/@item.Image"
+                                                 alt="@item.ProductName;"
+                                                 class="img_0 img-responsive" />
+                                        </div>
+                                        <!--Sale Label-->
+                                        <span class="label label-new">Sale</span>
+                                        <!--full quick view block-->
+                                        <a class="quickview iframe-link visible-lg"
+                                           data-fancybox-type="iframe" href="@Url.Action("Quickview", "Product", new { id = item.ProductID })">
+                                            Xem Nhanh
+                                        </a>
+                                        <!--Sale Label-->
+
+                                    </div>
+
+
+                                    <div class="right-block">
+                                        <div class="caption">
+                                            <h4><a href="@Url.Action("DetailProduct", "Product", new { id = item.ProductID })">@item.ProductName</a></h4>
+                                            <h4><a href="@Url.Action("DetailProduct", "Product", new { id = item.ProductID })"></a></h4>
+                                            <div class="ratings">
+                                                <div class="rating-box">
+                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="price">
+                                                @{int pricenew = (int)@item.PriceNew;
+
+                                                }
+                                                <span class="price-new">@pricenew.ToString("N0")</span>
+                                                <span class="price-old">@item.PriceOld</span>
+                                                <span class="label label-percent">-40%</span>
+                                            </div>
+                                            <div class="description item-desc hidden">
+                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est . </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-group">
+                                            <button class="addToCart" type="button" data-toggle="tooltip" title="Add to Cart" onclick="cart.add('@item.ProductID', '1' ,'@item.ProductName','@item.Image');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Thêm Vào Giỏ Hảng</span></button>
+                                        </div>
+                                    </div><!-- right block -->
+
+                                </div>
+                            </div>
+                      }
+                </div>              
+                <!--// End Changed listings-->
+            </div>
+
+        </div>
+    </div>
+    <!--Middle Part End-->
+</div>

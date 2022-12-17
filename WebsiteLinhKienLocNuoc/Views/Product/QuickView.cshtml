@@ -1,0 +1,163 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model Product
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<body class="res layout-subpage">
+    <div id="wrapper" class="wrapper-full ">
+        <!-- Main Container  -->
+        <div class="main-container container">
+
+            <div class="row">
+                <!--Middle Part Start-->
+                <div id="content" class="col-md-12 col-sm-12">
+
+                    <div class="product-view row">
+                        <div class="left-content-product col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="content-product-left  col-sm-6 col-xs-12 "> 
+                                    <div class="" data-id="@Model.ProductID">
+                                        <img src="/Public/image/demo/@Model.Image" data-zoom-image="/Public/image/demo/@Model.Image" title="@Model.ProductName" alt="@Model.ProductName" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="content-product-right col-sm-6 col-xs-12">
+                                    <div class="title-product">
+                                        <h1>@Model.ProductName</h1>
+                                    </div>
+                                    <!-- Review ---->
+                                    <div class="box-review form-group">
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                        <a class="reviews_button" href="quickview.php.html" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">0 reviews </a>
+                                    </div>
+
+                                    <div class="product-label form-group">
+                                        <div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+                                            @{int pricenew = (int)@Model.PriceNew;
+                                                
+                                            }
+                                            <span class="price-new" itemprop="price">@pricenew.ToString("N0")</span>
+                                            <span class="price-old">@Model.PriceOld</span>
+                                        </div>
+                                        <div class="stock"><span>Tình trạng: </span>  <span class="status-stock">Còn hàng </span></div>
+                                    </div>
+
+                                    <div class="product-box-desc">
+                                        <div class="inner-box-desc">
+                                            <div class="brand"><span>Nhãn hiệu: </span><a href="#">@Model.Brand </a>		 </div>
+                                            <div class="model"><span>Model: </span> @Model.Model</div>
+                                            <div class="reward"><span>Nhà cung cấp: </span> @Model.Suppiler </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="product">
+                                        <h4>Thông Tin Mua Hàng </h4>
+                                        <div class="image_option_type form-group required">
+                                            <label class="control-label" style="font-size:140%">
+                                                <span >Gọi điện thoại đặt mua: <label style="color:red;font-size:120%">0358.775.132</label></span>
+                                                </br>
+                                                <span>(08:00 - 20:00 mỗi ngày)</span>
+                                            </label>
+                                            
+                                        </div>
+
+
+
+                                        <div class="form-group box-info-product">
+                                            <div class="option quantity">
+                                                <div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+                                                    <label>Số lượng </label>
+                                                    <input id="quantity_add" class="form-control" type="text" name="quantity" value="1" />
+                                                    <input type="hidden" name="product_id" value="1" />
+                                                    <span class="input-group-addon product_quantity_down">− </span>
+                                                    <span class="input-group-addon product_quantity_up">+ </span>
+                                                </div>
+                                            </div>
+                                            <div class="cart">
+                                                <input type="button" data-toggle="tooltip" title="" value="Thêm vào giỏ hàng" onclick="Addproduct();" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Thêm vào giỏ hàng" />
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!-- end box info product -->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    
+
+
+                </div>
+
+
+            </div>
+            <!--Middle Part End-->
+        </div>
+        <!-- //Main Container -->
+
+        <style type="text/css">
+            #wrapper {
+                box-shadow: none;
+            }
+
+                #wrapper > *:not(.main-container) {
+                    display: none;
+                }
+
+            #content {
+                margin: 0
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .product-info .product-view, .left-content-product, .box-info-product {
+                margin: 0;
+            }
+
+                .left-content-product .content-product-right .box-info-product .cart input {
+                    padding: 12px 16px;
+                }
+
+                .left-content-product .content-product-right .box-info-product .add-to-links {
+                    width: auto;
+                    float: none;
+                    margin-top: 0px;
+                    clear: none;
+                }
+
+            .add-to-links ul li {
+                margin: 0;
+            }
+        </style>
+    </div>
+
+</body>
+
+<script>
+    
+    function Addproduct() {
+        var input_text = document.getElementById('quantity_add');
+        //alert(input_text);
+         cart.add('@Model.ProductID', input_text.value, '@Model.ProductName', '@Model.Image');
+    };
+   
+</script>

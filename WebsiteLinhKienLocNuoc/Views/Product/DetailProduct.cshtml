@@ -1,0 +1,294 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model Product
+@{
+    var listRelateProduct = (List<WebsiteLinhKienLocNuoc.Models.Product>)ViewBag.relateProduct;
+    var listReview = (List<WebsiteLinhKienLocNuoc.Models.Review>)ViewBag.listReview;
+    ViewBag.Title = "DeatilProduct";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+}
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="/Home/Index"><i class="fa fa-home"></i></a></li>
+        <li><a href="/Categories/Categories/@ViewBag.categoriesID">@ViewBag.subName</a></li> 
+        <li><a href="#">@Model.ProductName</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-md-12 col-sm-12">
+
+            <div class="product-view row">
+                <div class="left-content-product col-lg-12 col-xs-12">
+                    <div class="row">
+                        <div class="content-product-left  col-sm-6 col-xs-12 ">
+                            <div class="" data-id="@Model.ProductID">
+                                <img src="/Public/image/demo/@Model.Image" data-zoom-image="/Public/image/demo/@Model.Image" title="@Model.ProductName" alt="@Model.ProductName" style="width:300px;height:300px;" />
+                            </div>
+                        </div>
+
+                        <div class="content-product-right col-sm-6 col-xs-12">
+                            <div class="title-product">
+                                <h1>@Model.ProductName</h1>
+                            </div>
+                            <!-- Review ---->
+                            <div class="box-review form-group">
+                                <div class="ratings">
+                                    <div class="rating-box">
+                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                    </div>
+                                </div>
+                                <a class="reviews_button" href="quickview.php.html" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">@listReview.Count() đánh giá </a>
+                            </div>
+
+                            <div class="product-label form-group">
+                                <div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+                                    @{int pricenew = (int)@Model.PriceNew;
+
+                                    }
+                                    <span class="price-new" itemprop="price">@pricenew.ToString("N0")</span>
+                                    <span class="price-old">@Model.PriceOld</span>
+                                </div>
+                                <div class="stock"><span>Tình trạng: </span>  <span class="status-stock">Còn hàng </span></div>
+                            </div>
+
+                            <div class="product-box-desc">
+                                <div class="inner-box-desc">
+                                    <div class="brand"><span>Nhãn hiệu: </span><a href="#">@Model.Brand </a>		 </div>
+                                    <div class="model"><span>Model: </span> @Model.Model</div>
+                                    <div class="reward"><span>Nhà cung cấp: </span> @Model.Suppiler </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div id="product">
+                                <h4>Thông Tin Mua Hàng </h4>
+                                <div class="image_option_type form-group required">
+                                    <label class="control-label" style="font-size:140%">
+                                        <span>Gọi điện thoại đặt mua: <label style="color:red;font-size:120%">0358.775.132</label></span>
+                                        </br>
+                                        <span>(08:00 - 20:00 mỗi ngày)</span>
+                                    </label>
+
+                                </div>
+
+                                <div class="form-group box-info-product">
+                                    <div class="option quantity">
+                                        <div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+                                            <label>Số lượng </label>
+                                            <input id="quantity_add" class="form-control" type="text" name="quantity" value="1" />
+                                            <input type="hidden" name="product_id" value="1" />
+                                            <span class="input-group-addon product_quantity_down">− </span>
+                                            <span class="input-group-addon product_quantity_up">+ </span>
+                                        </div>
+                                    </div>
+                                    <div class="cart">
+                                        <input type="button" data-toggle="tooltip" title="" value="Thêm vào giỏ hàng" onclick="Addproduct();" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Thêm vào giỏ hàng" />
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- end box info product -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="producttab ">
+                <div class="tabsslider  col-xs-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-1">Mô Tả</a></li>
+                        <li class="item_nonactive"><a data-toggle="tab" href="#tab-review">Đánh Giá</a></li>
+                    </ul>
+                    <div class="tab-content col-xs-12">
+                        <div id="tab-1" class="tab-pane fade active in">
+                            <h2 id="tag0">@Model.ProductName</h2>
+                            <div class="" data-id="@Model.ProductID">
+                                <img src="/Public/image/demo/@Model.Image" data-zoom-image="/Public/image/demo/@Model.Image" title="@Model.ProductName" alt="@Model.ProductName" style="width:300px;height:300px;" />
+                            </div>
+                            @Html.Raw(@Model.Description)
+                        </div>
+                        <div id="tab-review" class="tab-pane fade">
+                            <form>
+                                <div id="review">
+                                    @foreach (var item in listReview)
+                                    {
+                                        <table class="table table-striped table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 50%;"><strong>@item.Customer.FirstName @item.Customer.LastName</strong></td>
+                                                    <td class="text-right">@String.Format("{0:d/M/yyyy HH:mm:ss}", item.DateAdded)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <p>@item.Comment</p>
+                                                        <div class="ratings">
+                                                            <div class="rating-box">
+                                                                @for (int i = 1; i <= item.NumStar; i++)
+                                                                {
+                                                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                                }
+                                                                @for (int i = ((int)item.NumStar) + 1; i <= 5; i++)
+                                                                {
+                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                                }
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    }
+                                    <div class="text-right"></div>
+                                </div>
+                                <h2 id="review-title">Viết đánh giá sản phẩm</h2>
+                                <div class="contacts-form">
+                                    <div class="form-group">
+                                        <span class="icon icon-bubbles-2"></span>
+                                        <textarea class="form-control" name="text" onblur="if (this.value == '') {this.value = 'Your Review';}" onfocus="if(this.value == 'Your Review') {this.value = '';}">Your Review</textarea>
+                                    </div>
+                                    <span style="font-size: 11px;"><span class="text-danger">Note:</span>						Chỉ được bình luận khi đã đăng nhập!</span>
+                                    <div class="form-group">
+                                        <b>Rating</b> <span>Bad</span>&nbsp;
+                                        <input type="radio" name="rating" value="1"> &nbsp;
+                                        <input type="radio" name="rating"
+                                               value="2"> &nbsp;
+                                        <input type="radio" name="rating"
+                                               value="3"> &nbsp;
+                                        <input type="radio" name="rating"
+                                               value="4"> &nbsp;
+                                        <input type="radio" name="rating"
+                                               value="5" checked="checked"> &nbsp;<span>Good</span>
+
+                                    </div>
+                                    @*<div class="buttons clearfix"><a id="button-review" class="btn buttonGray" onclick="reviewClick();">Đánh Giá</a></div>*@
+                                    <div class="buttons clearfix">
+
+                                        <button class="btn buttonGray" type="button" onclick="reviewClick();">
+                                            <span class="">Đánh Giá</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- //Product Tabs -->
+            <!-- Related Products -->
+            <div class="related titleLine products-list grid module ">
+                <h3 class="modtitle">Sản Phẩm Tương Tự </h3>
+                <div class="releate-products ">
+                    @foreach (var item in listRelateProduct)
+                    {
+                        <div class="product-layout">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container second_img ">
+                                        <img src="~/Public/image/demo/@item.Image"
+                                             alt="@item.ProductName;" class="img-responsive" />
+                                        <img src="~/Public/image/demo/@item.Image"
+                                             alt="@item.ProductName;"
+                                             class="img_0 img-responsive" />
+                                    </div>
+                                    <!--Sale Label-->
+                                    <!--full quick view block-->
+                                    <a class="quickview iframe-link visible-lg"
+                                       data-fancybox-type="iframe" href="@Url.Action("Quickview","Product",new { id = item.ProductID })">
+                                        Xem Nhanh
+                                    </a>
+                                    <!--end full quick view block-->
+                                </div>
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="@Url.Action("DetailProduct","Product",new { id = item.ProductID })">@item.ProductName</a></h4>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star-o fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="price">
+                                            @{int pricenew1 = (int)@item.PriceNew;
+
+                                            }
+                                            <span class="price-new">@pricenew1.ToString("N0")</span>
+                                            <span class="price-old">@Model.PriceOld</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-group">
+                                        <button class="addToCart" type="button"
+                                                data-toggle="tooltip" title="Add to Cart"
+                                                onclick="cart.add('@item.ProductID', '1' ,'@item.ProductName','@item.Image');">
+                                            <i class="fa fa-shopping-cart"></i> <span class="">Thêm Vào Giỏ Hàng</span>
+                                        </button>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--Middle Part End-->
+</div>
+<script>
+
+    function Addproduct() {
+        var input_text = document.getElementById('quantity_add');
+        //alert(input_text);
+         cart.add('@Model.ProductID', input_text.value, '@Model.ProductName', '@Model.Image');
+    };
+    function reviewClick() {
+
+        var nStar = $('input[name="rating"]:checked').val();
+        var comment = $('textarea[name="text"]').val();
+         $.ajax({
+                url: '/Product/Comment/',
+             dataType: 'json',
+             data: { id: '@Model.ProductID', comment: comment , nStar : nStar },
+                type: 'POST',
+                success: function (response) {
+                    //if (response.status == true) {
+                        window.location.reload();
+                        $('a[href=\'#tab-review\']').trigger('click');
+                    //}
+                }
+            });
+    }
+</script>

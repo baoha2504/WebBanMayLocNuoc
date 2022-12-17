@@ -1,0 +1,316 @@
+﻿@using WebsiteLinhKienLocNuoc.Models;
+@model Customer
+@{
+    var list = (List<WebsiteLinhKienLocNuoc.Models.Cart_item>)ViewBag.list;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Thanh Toán</a></li>
+
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-12">
+            <h2 class="title">Thanh Toán</h2>
+            <div class="so-onepagecheckout ">
+                <div class="col-left col-sm-3">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-user"></i> Thông Tin Cá Nhân</h4>
+                        </div>
+                        <div class="panel-body">
+                            <fieldset id="account">
+                                <div class="form-group required">
+                                    <label for="input-payment-firstname" class="control-label">Họ</label>
+                                    <input type="text" class="form-control" id="input-payment-firstname" placeholder="First Name" value="@Model.FirstName" name="firstname" readonly>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-payment-lastname" class="control-label">Tên</label>
+                                    <input type="text" class="form-control" id="input-payment-lastname" placeholder="Last Name" value="@Model.LastName" name="lastname" readonly>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-payment-email" class="control-label">E-Mail</label>
+                                    <input type="text" class="form-control" id="input-payment-email" placeholder="Email" value="@Model.Email" name="email" readonly>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-payment-telephone" class="control-label">Điện Thoại</label>
+                                    <input type="text" class="form-control" id="input-payment-telephone" placeholder="Telephone" value="@Model.Phone" name="telephone" readonly>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-book"></i> Địa Chỉ</h4>
+                        </div>
+                        <div class="panel-body">
+                            <fieldset id="address" class="required">
+                                <div class="form-group">
+                                    <label for="input-payment-company" class="control-label">Công Ty</label>
+                                    <input type="text" class="form-control" id="input-payment-company" placeholder="Company" value="@Model.Company" name="company" readonly>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-payment-address-1" class="control-label">Địa Chỉ 1</label>
+                                    <input type="text" class="form-control" id="input-payment-address-1" placeholder="Address 1" value="@Model.Address1" name="address_1" readonly>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-payment-city" class="control-label">Thành Phố</label>
+                                    <input type="text" class="form-control" id="input-payment-city" placeholder="City" value="@Model.City" name="city" readonly>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked="checked" value="1" name="shipping_address" readonly>
+                                        Sử dụng địa chỉ giao hàng khác.
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default no-padding">
+                                <div class="col-sm-6 checkout-shipping-methods">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-truck"></i> Phương Thức Vận Chuyển</h4>
+                                    </div>
+                                    <div class="panel-body ">
+                                        <p>Chọn phương thức vận chuyển cho đơn hàng.</p>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" id="ship" checked="checked" value="1" name="Shipping1" onclick="removeCheckedShip(1,2)">
+                                                Giao Hàng Tiết Kiệm - 0.00
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" id="ship" name="Shipping2" value="2" onclick="removeCheckedShip(2,1)">
+                                                Giao Hàng Nhanh - 30,000
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6  checkout-payment-methods">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-credit-card"></i> Phương Thức Thanh Toán</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>Chọn phương thức thanh toán cho đơn hàng.</p>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" id="payment" checked="checked" value="1" name="Payment1" onclick="removeCheckedPayment(1,2)">Thanh toán khi nhận hàng
+                                            </label>
+                                        </div>
+
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" id="payment" value="2" name="Payment2" onclick="removeCheckedPayment(2,1)">Chuyển Khoản
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><i class="fa fa-ticket"></i> Bạn có mã giảm giá hoặc khuyến mãi?</h4>
+                                </div>
+                                <div class="panel-body row">
+                                    <div class="col-sm-6 ">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value="" name="coupon">
+                                            <span class="input-group-btn">
+                                                <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Nhập mã giảm giá">
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="input-voucher" placeholder="Enter your gift voucher code here" value="" name="voucher">
+                                            <span class="input-group-btn">
+                                                <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Nhập mã khuyến mãi">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><i class="fa fa-shopping-cart"></i> Shopping cart</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td class="text-center">Ảnh </td>
+                                                    <td class="text-left">Tên Sản Phẩm</td>
+                                                    <td class="text-left">Nhãn Hiệu</td>
+                                                    <td class="text-left">Model</td>
+                                                    <td class="text-left">Số Lượng</td>
+                                                    <td class="text-right">Giá Tiền</td>
+                                                    <td class="text-right">Tổng Tiền</td>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in list)
+                                                {
+                                                    <tr id="q_@item.ProductID">
+                                                        <td class="text-center"><a href="/Product/DetailProduct/@item.ProductID"><img style="width:70px" src="/Public/image/demo/@item.product.Image" alt="@item.product.ProductName" title="@item.product.ProductName" class="img-thumbnail" /></a></td>
+                                                        <td class="text-left">
+                                                            <a href="/Product/DetailProduct/@item.ProductID">@item.product.ProductName</a><br />
+                                                        </td>
+                                                        <td class="text-left">@item.product.Brand</td>
+                                                        <td class="text-left">@item.product.Model</td>
+                                                        <td class="text-left" width="200px">
+                                                            <div class="input-group btn-block quantity">
+                                                                <input type="text" name="quantity" value="@item.Quantity" size="1" class="form-control" readonly />
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">@item.Price.ToString("N0")</td>
+                                                        @{int total = (int)(@item.product.PriceNew) * (int)(@item.Quantity);
+
+                                                        }
+                                                        <td class="text-right">@total.ToString("N0")</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="text-right" colspan="6"><strong>Tổng sản phẩm:</strong></td>
+                                                    @{ int Total = (int)@ViewBag.CartTotal;}
+                                                    <td id="subtotol" class="text-right">@Total.ToString("N0")</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="6"><strong>Phí vận chuyển:</strong></td>
+                                                    <td id="shipfees" class="text-right">0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="6"><strong>Giảm giá:</strong></td>
+                                                    <td class="text-right">0</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="text-right" colspan="6"><strong>Tổng Cộng:</strong></td>
+                                                    <td id="TotalOrder" class="text-right">@Total.ToString("N0")</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><i class="fa fa-pencil"></i> Lưu ý về đơn hàng cho người bán</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <textarea rows="4" class="form-control" id="confirm_comment" name="comments"></textarea>
+                                    <br>
+
+
+                                    <div class="buttons">
+                                        <div class="pull-right">
+                                            <button class="btn btn-primary" type="button" onclick="order(@ViewBag.CartTotal);">
+                                                <span class="">Xác nhận đặt hàng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Middle Part End -->
+    </div>
+</div>
+<script>
+
+    function removeCheckedShip(id1, id2) {
+        var name1 = 'Shipping' + id1;
+        var name2 = 'Shipping' + id2;
+        $("input:radio[name=" + name2 + " ]").each(function (i) {
+            this.checked = false;
+        });
+        $("input:radio[name=" + name1 + " ]").each(function (i) {
+            this.checked = true;
+        });
+        var value1 = $('input[id=ship]:checked').val();
+        if (value1 == 2) {
+            var Total = @ViewBag.CartTotal;
+            Total += 30000;
+            var sTotal = Total.toString();
+            document.getElementById("TotalOrder").innerText = format(sTotal);
+            document.getElementById("shipfees").innerText = '30,000';
+        }
+        else if (value1 == 1) {
+            var Total = @ViewBag.CartTotal;
+            document.getElementById("TotalOrder").innerText  = format(Total);
+            document.getElementById("shipfees").innerText  = '0';
+        }
+       
+    }
+    function removeCheckedPayment(id1, id2) {
+        var name1 = 'Payment' + id1;
+        var name2 = 'Payment' + id2;
+        $("input:radio[name=" + name2 + " ]").each(function (i) {
+            this.checked = false;
+        });
+        $("input:radio[name=" + name1 + " ]").each(function (i) {
+            this.checked = true;
+        });
+    }
+    function order(Totalorder) {
+        var value1 = $('input[id=ship]:checked').val();
+        var value2 = $('input[id=payment]:checked').val();
+        var shippingadd = $('input[name="address_1"]').val();
+        var name = $('input[name="firstname"]').val() +' '+$('input[name="lastname"]').val();
+        alert(name);
+        var phone = $('input[name="telephone"]').val();
+        var comment = $('textarea[id=confirm_comment]').val();        
+        $.ajax({
+            url: '/CheckOut/Payment/',
+            dataType: 'json',
+            data: { shipid: value1, paymentid: value2, shipadd: shippingadd, total: Totalorder, note: comment, name: name, phone: phone },
+                type: 'POST',
+                success: function (response) {
+                    if (response.status == true) {
+                        window.location.href = '@Url.Content("~/Order/OrderHistory")';               
+                    }
+                }
+            });
+
+    }
+    function format(x) {
+    return isNaN(x)?"":x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    window.onload = function () {
+        var cart = document.getElementById("cart");
+        cart.setAttribute("class","hidden");
+    }
+</script>
+

@@ -1,0 +1,217 @@
+﻿
+@{
+     var list = (List<WebsiteLinhKienLocNuoc.Models.Cart_item>)ViewBag.list;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="/Home/Index"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Giỏ Hàng</a></li>
+        </ul>
+
+        <div class="row"> 
+            <!--Middle Part Start-->
+            @if (list == null || list.Count()==0 )
+            {<div id="content" class="col-sm-12">
+                <img src="~/Public/image/theme/icons/apple-touch-icon-114-precomposed.png"
+                     alt="cart;" class="img-responsive" style="height:200px" />
+                <h3 style="text-align:center">Giỏ hàng đang trống. Hãy tiếp tục mua hàng</h3>
+                 <div class="buttons">
+                        <div class="pull-left"><a href="/Home/Index" class="btn btn-primary">Tiếp tục mua hàng</a></div>
+                        
+                  </div>
+            </div>
+            }
+            else
+            {
+            <div id="content" class="col-sm-12">
+                <div class="table-responsive form-group">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td class="text-center">Ảnh </td>
+                                <td class="text-left">Tên Sản Phẩm</td>
+                                <td class="text-left">Nhãn Hiệu</td>
+                                <td class="text-left">Model</td>
+                                <td class="text-left">Số Lượng</td>
+                                <td class="text-right">Giá Tiền</td>
+                                <td class="text-right">Tổng Tiền</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                           @foreach (var item in list)
+                            {
+                            <tr id="q_@item.ProductID">
+                                <td class="text-center"><a href="/Product/DetailProduct/@item.ProductID"><img style="width:70px" src="/Public/image/demo/@item.product.Image" alt="@item.product.ProductName" title="@item.product.ProductName" class="img-thumbnail" /></a></td>
+                                <td class="text-left">
+                                    <a href="/Product/DetailProduct/@item.ProductID">@item.product.ProductName</a><br />
+                                </td>
+                                <td class="text-left">@item.product.Brand</td>
+                                <td class="text-left">@item.product.Model</td>
+                                <td class="text-left" width="200px">
+                                    <div class="input-group btn-block quantity">
+                                        <input id="quan_@item.ProductID" type="text" name="quantity" value="@item.Quantity" size="1" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" data-toggle="tooltip" title="Cập Nhật" class="btn btn-primary" onclick="UpdateCart(@item.ProductID)"><i class="fa fa-clone"></i></button>
+                                            <button type="button" data-toggle="tooltip" title="Xóa" class="btn btn-danger" onClick="cart.remove(@item.ProductID);"><i class="fa fa-times-circle"></i></button>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="text-right">@item.Price.ToString("N0")</td>
+                                @{int total = (int)(@item.product.PriceNew) * (int)(@item.Quantity);
+
+                                }
+                                <td id="tempprice" class="text-right">@total.ToString("N0")</td>
+                            </tr>
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subtitle no-margin">What would you like to do next?</h3>
+                <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapse-coupon" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                                    Sử dụng mã giảm giá
+
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-coupon" class="panel-collapse collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <label class="col-sm-2 control-label" for="input-coupon">Nhập mã giảm giá</label>
+                                <div class="input-group">
+                                    <input type="text" name="coupon" value="" placeholder="Enter your coupon here" id="input-coupon" class="form-control">
+                                    <span class="input-group-btn"><input type="button" value="Nhập mã" id="button-coupon" data-loading-text="Loading..." class="btn btn-primary"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapse-shipping" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
+                                    Địa chỉ giao hàng nhanh nhất
+
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-shipping" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>Nhập địa chỉ giao hàng</p>
+                                <div class="form-horizontal">
+                                    <div class="form-group required">
+                                        <label class="col-sm-2 control-label" for="input-country">Quốc gia</label>
+                                        <div class="col-sm-10">
+                                            <select name="country_id" id="input-country" class="form-control">
+                                                <option value=""> --- Please Select --- </option>
+                                                @*<option value="244">Aaland Islands</option>
+                    <option value="1">Afghanistan</option>
+                    <option value="2">Albania</option>*@
+                                                <option value="3">Việt Nam</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2 control-label" for="input-zone">Tỉnh</label>
+                                        <div class="col-sm-10">
+                                            <select name="zone_id" id="input-zone" class="form-control">
+                                                <option value=""> --- Please Select --- </option>
+                                                <option value="3513">Hà Nội</option>
+                                                <option value="3514">Quảng Ninh</option>
+                                                <option value="3515">Bắc Giang</option>
+                                                <option value="3516">Thanh Hóa</option>
+                                                <option value="3517">Đà Nẵng</option>
+                                                <option value="3518">Bình Dương</option>
+                                                <option value="3519">Thành phố Hồ Chí Minh</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2 control-label" for="input-postcode">Mã Code</label>
+                                        <div class="col-sm-10"><input type="text" name="postcode" value="" placeholder="Post Code" id="input-postcode" class="form-control"></div>
+                                    </div>
+                                    <button type="button" onclick="myFunction()" id="button-quote" data-loading-text="Loading..." class="btn btn-primary">Ước tính</button>
+                                    <p id="demo"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="text-right">
+                                        <strong>Tổng sản phẩm:</strong>
+                                    </td>
+                                    @{ int Total = (int)@ViewBag.CartTotal;}
+                                    <td id="subtotol" class="text-right">@Total.ToString("N0")</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="pull-left"><a href="/Home/Index" class="btn btn-primary">Tiếp tục mua hàng</a></div>
+                    <div class="pull-right"><a href="/CheckOut/Index" class="btn btn-primary">Thanh Toán</a></div>
+                </div>
+            </div>
+            }
+            <!--Middle Part End -->
+
+        </div>
+    </div>
+    <script>
+
+        function UpdateCart(product_id) {
+            var input_text = document.getElementById('quan_' + product_id);
+            var value = input_text.value;
+            $.ajax({
+                url: '/Cart/Update/',
+                dataType: 'json',
+                data: { id: product_id, quantity: value },
+                type: 'POST',
+                success: function (response) {
+                    if (response.status == true) {
+                        //window.location.reload();
+                        //document.getElementById("tr_" + response.productid).remove();
+                        document.getElementById("cartnum").innerHTML = response.Count + ' sản phẩm';
+                        document.getElementById("subtotal").innerHTML = response.subtotal.toString("N0");
+                        document.getElementById('quantity_' + response.productid).innerHTML = response.quantity;
+                        document.getElementById("tempprice").innerText = response.tempprice.toString("N0");
+                        document.getElementById("subtotol").innerText = response.subtotal.toString("N0");
+                    }
+                }
+            });
+        };
+        function updateProductNotice(title, thumb, text, type) {
+            $.jGrowl.defaults.closer = false;
+            //Stop jGrowl
+            //$.jGrowl.defaults.sticky = true;
+            var tpl = thumb + "<h3>" + text + "</h3>";
+            $.jGrowl(tpl, {
+                life: 4000,
+                header: title,
+                speed: 'slow',
+                theme: type
+            });
+        }
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Chức năng ước tính chưa hoàn thành";
+        }
+       
+    </script>
+
