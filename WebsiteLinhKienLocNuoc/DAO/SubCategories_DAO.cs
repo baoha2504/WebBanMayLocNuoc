@@ -21,6 +21,14 @@ namespace WebsiteLinhKienLocNuoc.DAO
                DataTable tb = cn.LoadTable(query);
                return tb; 
           }
+
+           //public List<SubCategory> GetListSubCategories()  //gộp 2 cái trên
+           //{
+           // string query = "select * from SubCategories  ";
+           // DataTable tb = cn.LoadTable(query);
+           // List<SubCategory> sub = cn.ConvertToList<SubCategory>(tb);
+           // return sub;
+           //}
           public SubCategory GetNameSubCategories(int id)
           {
                string query = "select SubCategoriesName from SubCategories where SubCategoriesID = @id";

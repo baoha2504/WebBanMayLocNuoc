@@ -52,5 +52,6 @@ namespace WebsiteLinhKienLocNuoc.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderStatusHistory> OrderStatusHistories { get; set; }
+        public List<int> Number { get; set; }
     }
 }

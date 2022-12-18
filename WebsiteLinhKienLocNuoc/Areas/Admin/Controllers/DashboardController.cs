@@ -12,6 +12,9 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
         Order_DAO orderDAO = new Order_DAO();
         Customer_DAO cusDAO = new Customer_DAO();
         Product_DAO proDAO = new Product_DAO();
+        Categories_DAO cateDAO = new Categories_DAO();
+        SubCategories_DAO subDAO = new SubCategories_DAO();
+        
         // GET: Admin/Dashboard
         public ActionResult Index()
         {
@@ -19,6 +22,7 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             orders = orderDAO.GetOrderData();
             List<Order> orders1 = new List<Order>();
             List<Order> orders2 = new List<Order>();
+          
             for (int i = 0; i < orders.Count; i++)
             {
                 OrderStatusHistory orderStatus = orderDAO.GetNewStatusByOrderid(orders[i].OrderID);
@@ -26,13 +30,21 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
                 if ((orders[i].DateAdd.Value.DayOfYear) == DateTime.Now.DayOfYear) { orders2.Add(orders[i]); }
             }
 
+            
+         
             ViewBag.Order = orders1.Count();
             ViewBag.Order2 = orders2.Count();
             ViewBag.Customers = cusDAO.GetListCustomer3().Count();
             ViewBag.Staff = cusDAO.GetListCustomer2().Count();
             ViewBag.Admin = cusDAO.GetListCustomer1().Count();
             ViewBag.Products = proDAO.GetProduct().Count();
-            ViewBag.RevenueDay = orderDAO.GetRevenueDay()[0].ToString();
+            ViewBag.RevenueDay = orderDAO.GetRevenueDay();
+            ViewBag.RevenueMonth = orderDAO.GetRevenueMonth();
+            ViewBag.RevenueYear = orderDAO.GetRevenueYear();
+          
+            ViewBag.Categories = cateDAO.GetCategories().Count() ;
+            //ViewBag.Subcategories = subDAO.GetListSubCategories().Count();
+            ViewBag.Subcategories = subDAO.GetSubCategories().Count();
             return View();
         }
     }

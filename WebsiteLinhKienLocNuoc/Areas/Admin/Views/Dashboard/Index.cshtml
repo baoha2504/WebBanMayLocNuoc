@@ -53,6 +53,105 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0">@ViewBag.Categories</h5>
+                                <h6 class="mt-0 mb-3">Số danh mục</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0">@ViewBag.SubCategories</h5>
+                                <h6 class="mt-0 mb-3">Số danh mục con</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                           
+                                <h5 class="float-right mt-0">@ViewBag.Products</h5>
+                                <h6 class="mt-0 mb-3">Sản Phẩm</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0">@Html.Raw(ViewBag.RevenueDay)</h5>
+                                <h6 class="mt-0 mb-3">Doanh Thu Ngày</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0">@Html.Raw(ViewBag.RevenueMonth)</h5>
+                                <h6 class="mt-0 mb-3">Doanh Thu Tháng</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0">@Html.Raw(ViewBag.RevenueYear)</h5>
+                                <h6 class="mt-0 mb-3">Doanh Thu Năm</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="col-xl-3 col-md-6">
                     <div class="card mini-stats">
                         <div class="p-3 mini-stats-content">
@@ -94,36 +193,6 @@
                             <div class="bg-white p-3 mini-stats-desc rounded">
                                 <h5 class="float-right mt-0">@ViewBag.Customers</h5>
                                 <h6 class="mt-0 mb-3">Khách Hàng</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card mini-stats">
-                        <div class="p-3 mini-stats-content">
-                            <div class="mb-4">
-                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
-                            </div>
-                        </div>
-                        <div class="ml-3 mr-3">
-                            <div class="bg-white p-3 mini-stats-desc rounded">
-                                <h5 class="float-right mt-0">@ViewBag.Products</h5>
-                                <h6 class="mt-0 mb-3">Sản Phẩm</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card mini-stats">
-                        <div class="p-3 mini-stats-content">
-                            <div class="mb-4">
-                                <span class="peity-donut" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
-                            </div>
-                        </div>
-                        <div class="ml-3 mr-3">
-                            <div class="bg-white p-3 mini-stats-desc rounded">
-                                <h5 class="float-right mt-0">@ViewBag.RevenueDay</h5>
-                                <h6 class="mt-0 mb-3">Doanh Thu Ngày</h6>
                             </div>
                         </div>
                     </div>

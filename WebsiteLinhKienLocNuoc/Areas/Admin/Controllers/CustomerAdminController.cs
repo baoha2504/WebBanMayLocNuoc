@@ -19,7 +19,7 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
           public ActionResult Index()
           { 
                List<Customer> customers = new List<Customer>();
-               customers = cusDAO.GetListCustomer2();
+               customers = cusDAO.GetListCustomer3();
                return View(customers);
           }
           public ActionResult Account()

@@ -69,30 +69,34 @@ namespace WebsiteLinhKienLocNuoc.DAO
             return lst;
         }
 
-        public List<int> GetRevenueDay()
+    
+        public string GetRevenueDay()
+        {
+            string query = "Select sum(total) as tol " +
+                "from dbo.[Order], OrderStatusHistory " +
+                "where dbo.[Order].OrderID = OrderStatusHistory.OrderID " +
+                "and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' " +
+                "and Cast(OrderStatusHistory.DateAdd as Date)= cast(GETDATE() as date)";
+            DataTable tb = cn.LoadTable(query);
+            string lst = tb.Rows[0][0].ToString();
+            return lst;
+        }
+        public string GetRevenueMonth()
+        {
+            string query = "Select sum(total) from dbo.[Order], OrderStatusHistory where dbo.[Order].OrderID = OrderStatusHistory.OrderID and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' and MONTH(OrderStatusHistory.DateAdd) = MONTH(GETDATE())";
+            DataTable tb = cn.LoadTable(query);
+            string lst = tb.Rows[0][0].ToString();
+            return lst;
+        }
+        public string GetRevenueYear()
         {
             string query = "Select sum(total) " +
                 "from dbo.[Order], OrderStatusHistory " +
                 "where dbo.[Order].OrderID = OrderStatusHistory.OrderID " +
                 "and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' " +
-                "and OrderStatusHistory.DateAdd <= GETDATE() " +
-                "and OrderStatusHistory.DateAdd > GETDATE()-1";
+                "and YEAR(OrderStatusHistory.DateAdd) = YEAR(GETDATE())";
             DataTable tb = cn.LoadTable(query);
-            List<int> lst = cn.ConvertToList<int>(tb);
-            return lst;
-        }
-        public List<int> GetRevenueMonth()
-        {
-            string query = "SELECT OrderID FROM dbo.OrderStatusHistory WHERE OrderStatusName=N'Đang Chờ Xác Nhận' ORDER BY DateAdd DESC";
-            DataTable tb = cn.LoadTable(query);
-            List<int> lst = cn.ConvertToList<int>(tb);
-            return lst;
-        }
-        public List<int> GetRevenueYear()
-        {
-            string query = "SELECT OrderID FROM dbo.OrderStatusHistory WHERE OrderStatusName=N'Đang Chờ Xác Nhận' ORDER BY DateAdd DESC";
-            DataTable tb = cn.LoadTable(query);
-            List<int> lst = cn.ConvertToList<int>(tb);
+            string lst = tb.Rows[0][0].ToString();
             return lst;
         }
 
