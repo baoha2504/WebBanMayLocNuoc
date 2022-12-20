@@ -36,7 +36,14 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                 ViewBag.CartTotal = priceTotal;
                 ViewBag.CartNum = list.Count();
                 ViewBag.Discount = Session["discount"];
-                ViewBag.PriceAfterDiscount = Session["priceAfterDiscount"];
+                if (Session["priceAfterDiscount"] != null)
+                {
+                    ViewBag.PriceAfterDiscount = Session["priceAfterDiscount"];
+                } else
+                {
+                    ViewBag.PriceAfterDiscount = 0;
+                }
+                ViewBag.Voucher = Session["vouchercode"];
                 ViewBag.list = (List<Cart_item>)sessionCart;
                 return View(customer);
             }
@@ -53,6 +60,7 @@ namespace WebsiteLinhKienLocNuoc.Controllers
             Voucher vouchers = vcDAO.GetVoucherByCode(voucher);
             int priceAfterDiscount;
             int discount;
+            Session["vouchercode"] = voucher;
             //int price;
             if (vouchers != null)
             {
