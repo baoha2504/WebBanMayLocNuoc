@@ -68,7 +68,7 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                          {
                               lShipped.Add(listOrder[i]);
                          }
-                         else if (newStatus == "Đã Giao")
+                         else if (newStatus == "Đã Giao Hàng")
                          {
                               lCompleted.Add(listOrder[i]);
                          }
@@ -95,7 +95,7 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                orderStatusHistory.OrderStatusName = "Đã Hủy";
                orderStatusHistory.CanceledBy = "Khách Hàng";
                checkDAO.InsertOrderHistory(orderStatusHistory);
-               Message.set_flash("Hủy Đơn Hành Thành Công", "success");
+               Message.set_flash("Hủy Đơn Hàng Thành Công", "success");
                return Json(new
                {
                     status = true

@@ -33,20 +33,21 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                return View(Listproduct.ToPagedList(pageNumber, pageSize));
 
           }
-          public ActionResult AdvancedSearch(int? category_1, int? category_2, int? category_3, int? category_4, int? category_5, int? category_6, int? category_7, int? category_8, string brand_1, string brand_2, string brand_3, int valuemin, int valuemax, int? page)
-          {
-               List<Product> Listproduct = prDAO.FilterProDuct("lõi");
-               ViewBag.lst1 = Listproduct;
-               if (page == null) page = 1;
-               int pageSize = 8;
-               int pageNumber = (page ?? 1);
-               ViewBag.page = page;
-               ViewBag.key = "key";
-               ViewBag.numResult = Listproduct.Count();
-               return View(Listproduct.ToPagedList(pageNumber, pageSize));
+        public ActionResult AdvancedSearch(int? category_1, int? category_2, int? category_3, int? category_4, int? category_5, int? category_6, int? category_7, int? category_8, string brand_1, string brand_2, string brand_3, int valuemin, int valuemax, int? page)
+        {
+            List<Product> Listproduct = prDAO.FilterProDuct("lõi");
+            ViewBag.lst1 = Listproduct;
+            if (page == null) page = 1;
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
+            ViewBag.page = page;
+            ViewBag.key = "key";
+            ViewBag.numResult = Listproduct.Count();
+            return View(Listproduct.ToPagedList(pageNumber, pageSize));
 
-          }
-          [HttpGet]
+        }
+
+        [HttpGet]
           public ActionResult Search(string search, string submit_search)
           {
                return RedirectToAction("SearchProduct", "Home", new { key = search });
