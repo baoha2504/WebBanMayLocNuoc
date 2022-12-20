@@ -68,7 +68,7 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                          {
                               lShipped.Add(listOrder[i]);
                          }
-                         else if (newStatus == "Đã Giao")
+                         else if (newStatus == "Đã Giao Hàng")
                          {
                               lCompleted.Add(listOrder[i]);
                          }
