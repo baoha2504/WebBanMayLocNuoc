@@ -68,8 +68,6 @@ namespace WebsiteLinhKienLocNuoc.DAO
             List<int> lst = cn.ConvertToList<int>(tb);
             return lst;
         }
-
-    
         public string GetRevenueDay()
         {
             string query = "Select sum(total) as tol " +
@@ -133,6 +131,17 @@ namespace WebsiteLinhKienLocNuoc.DAO
             DataTable tb = cn.LoadTable(query);
             string lst = tb.Rows[0][0].ToString();
             return lst;
+        }
+        public DataTable GetTop2Customer()
+        {
+            string query = "select top(2) FirstName+' '+LastName as Ten, sum(Total)  " +
+                "from dbo.[Order] join Customer on dbo.[Order].CustomerID = Customer.CustomerID " +
+                "where MONTH(DateAdd) = MONTH(GETDATE()) " +
+                "and Access = 3 " +
+                "group by (FirstName+' '+LastName) " +
+                "order by sum(Total) desc";
+            DataTable tb = cn.LoadTable(query);
+            return tb;
         }
     }
 }

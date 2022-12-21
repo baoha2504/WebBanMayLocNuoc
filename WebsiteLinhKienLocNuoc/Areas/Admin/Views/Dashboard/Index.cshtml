@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+    var Reviews = (List<WebsiteLinhKienLocNuoc.Models.Review>)ViewBag.Reviews;
 }
 
 <div class="content-page">
@@ -342,10 +343,10 @@
                             <p class="text-muted mb-3">Top Bán Hàng</p>
                             <div class="row">
                                 <div class="col-6">
-                                    <p class="text-muted mb-2">Nhân viên 1 : <b class="text-dark">$ 8,235</b></p>
+                                    <p class="text-muted mb-2">@ViewBag.Customer1: <b class="text-dark">@ViewBag.TotalCustomer1 đ</b></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="text-muted mb-2">Nhân viên 2 : <b class="text-dark">$ 7,256</b></p>
+                                    <p class="text-muted mb-2">@ViewBag.Customer2: <b class="text-dark">@ViewBag.TotalCustomer2 đ</b></p>
                                 </div>
                             </div>
                         </div>
@@ -362,7 +363,7 @@
                         <nav class="mt-4">
                             <div class="nav nav-tabs latest-messages-tabs nav-justified" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-first-tab" data-bs-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-first" aria-selected="true">
-                                    <h4 class="mt-0">12</h4>
+                                    <h4 class="mt-0">@ViewBag.Month</h4>
                                     <p class="text-muted mb-0">Tháng</p>
                                 </a>
                             </div>
@@ -371,54 +372,23 @@
                             <div class="tab-pane show active" id="nav-first" role="tabpanel" aria-labelledby="nav-first-tab">
                                 <div class="p-2 mt-2">
                                     <ul class="list-unstyled latest-message-list mb-0">
-                                        <li class="message-list-item">
-                                            <a href="#" class="text-dark">
-                                                <div class="d-flex">
-                                                    <img class="me-3 avatar-sm rounded-circle" src="assets/images/users/avatar-2.jpg" alt="">
-                                                    <div class="">
-                                                        <h6 class="mt-0">Michael Bowen</h6>
-                                                        <p class="text-muted mb-0">Hey! there I'm available...</p>
-                                                        <p class="time text-muted">Just Now</p>
+                                        @for(int i = 0; i < Reviews.Count; i++){
+                                            <li class="message-list-item">
+                                                <a class="text-dark">
+                                                    <div class="d-flex">
+                                                        <img class="me-3 avatar-sm rounded-circle" src="assets/images/users/avatar-2.jpg" alt="">
+                                                        <div class="">
+                                                            @if(i == 0) {<h6 class="mt-0">@ViewBag.CustomerReviews0.FirstName @ViewBag.CustomerReviews0.LastName</h6> }
+                                                            else if(i == 1) {<h6 class="mt-0">@ViewBag.CustomerReviews1.FirstName @ViewBag.CustomerReviews1.LastName</h6> }
+                                                            else if(i == 2) {<h6 class="mt-0">@ViewBag.CustomerReviews2.FirstName @ViewBag.CustomerReviews2.LastName</h6> }
+                                                            else if(i == 3) {<h6 class="mt-0">@ViewBag.CustomerReviews3.FirstName @ViewBag.CustomerReviews3.LastName</h6> }
+                                                            <p class="text-muted mb-0">@Reviews[i].Comment</p>
+                                                            <p class="time text-muted">@Reviews[i].DateAdded</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-list-item">
-                                            <a href="#" class="text-dark">
-                                                <div class="d-flex">
-                                                    <img class="me-3 avatar-sm rounded-circle" src="assets/images/users/avatar-3.jpg" alt="">
-                                                    <div class="">
-                                                        <h6 class="mt-0">Danny Benson</h6>
-                                                        <p class="text-muted mb-0">I've finished it! See you so...</p>
-                                                        <p class="time text-muted">12 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-list-item">
-                                            <a href="#" class="text-dark">
-                                                <div class="d-flex">
-                                                    <img class="me-3 avatar-sm rounded-circle" src="assets/images/users/avatar-4.jpg" alt="">
-                                                    <div class="">
-                                                        <h6 class="mt-0">Brady Smith</h6>
-                                                        <p class="text-muted mb-0">This theme is awesome!</p>
-                                                        <p class="time text-muted">23 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-list-item">
-                                            <a href="#" class="text-dark">
-                                                <div class="d-flex">
-                                                    <img class="me-3 avatar-sm rounded-circle" src="assets/images/users/avatar-5.jpg" alt="">
-                                                    <div class="">
-                                                        <h6 class="mt-0">Danny Benson</h6>
-                                                        <p class="text-muted mb-0">Nice to meet you</p>
-                                                        <p class="time text-muted">34 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                                </a>
+                                            </li>
+                                        }
                                     </ul>
                                 </div>
                             </div>

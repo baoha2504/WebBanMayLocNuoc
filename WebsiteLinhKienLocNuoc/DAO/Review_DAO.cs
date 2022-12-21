@@ -39,5 +39,12 @@ namespace WebsiteLinhKienLocNuoc.DAO
             string lst = tb.Rows[0][0].ToString();
             return lst;
         }
+        public List<Review> GetTop4ReviewNew()
+        {
+            string query = "select top(4) FirstName+' '+LastName as Ten,Review.CustomerID , Comment, Review.DateAdded from Review, Customer where Review.CustomerID = Customer.CustomerID order by DateAdded desc"; ;
+            DataTable tb = cn.FillDataTable(query, CommandType.Text);
+            List<Review> sp = cn.ConvertToList<Review>(tb);
+            return sp;
+        }
     }
 }

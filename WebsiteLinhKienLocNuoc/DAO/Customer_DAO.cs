@@ -119,11 +119,5 @@ namespace WebsiteLinhKienLocNuoc.DAO
             object[] value = new object[4] { customer.Email, customer.PassWord, customer.Access, customer.Prohibit };
             return cn.Excute_Sql(query, CommandType.StoredProcedure, para, value);
         }
-        //public DataTable GetDataCustomers()
-        //{
-        //    string query = "select * from Customer where Access < 3";
-        //    DataTable tb = cn.LoadTable(query);
-        //    return tb;
-        //}
     }
 }

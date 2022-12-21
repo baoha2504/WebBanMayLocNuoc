@@ -22,7 +22,13 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             orders = orderDAO.GetOrderData();
             List<Order> orders1 = new List<Order>();
             List<Order> orders2 = new List<Order>();
-
+            List<Review> reviews = new List<Review>();
+            Customer[] customer = new Customer[4];
+            reviews = rvDao.GetTop4ReviewNew();
+            for(int i = 0; i < reviews.Count; i++)
+            {
+                customer[i] = cusDAO.GetCustomerbyID(reviews[i].CustomerID);
+            }
             for (int i = 0; i < orders.Count; i++)
             {
                 OrderStatusHistory orderStatus = orderDAO.GetNewStatusByOrderid(orders[i].OrderID);
@@ -96,8 +102,27 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             {
                 ViewBag.TotalMoneyOfMachineInMonth = "0";
             }
+            if (orderDAO.GetTop2Customer() != null)
+            {
+                ViewBag.Customer1 = orderDAO.GetTop2Customer().Rows[0][0];
+                ViewBag.TotalCustomer1 = string.Format("{0:0,0}", Convert.ToDecimal(orderDAO.GetTop2Customer().Rows[0][1]));
+                ViewBag.Customer2 = orderDAO.GetTop2Customer().Rows[1][0];
+                ViewBag.TotalCustomer2 = string.Format("{0:0,0}", Convert.ToDecimal(orderDAO.GetTop2Customer().Rows[1][1]));
+            }
+            else
+            {
+                ViewBag.Customer1 = "Khách hàng 1";
+                ViewBag.TotalCustomer1 = "0";
+                ViewBag.Customer1 = "Khách hàng 2";
+                ViewBag.TotalCustomer1 = "0";
+            }
+            ViewBag.Reviews = reviews;
+            ViewBag.CustomerReviews0 = customer[0];
+            ViewBag.CustomerReviews1 = customer[1];
+            ViewBag.CustomerReviews2 = customer[2];
+            ViewBag.CustomerReviews3 = customer[3];
+            ViewBag.Month = DateTime.Now.Month;
             ViewBag.Categories = cateDAO.GetCategories().Count();
-            //ViewBag.Subcategories = subDAO.GetListSubCategories().Count();
             ViewBag.Subcategories = subDAO.GetSubCategories().Count();
             return View();
         }
