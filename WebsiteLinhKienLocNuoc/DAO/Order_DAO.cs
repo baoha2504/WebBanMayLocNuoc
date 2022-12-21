@@ -83,7 +83,11 @@ namespace WebsiteLinhKienLocNuoc.DAO
         }
         public string GetRevenueMonth()
         {
-            string query = "Select sum(total) from dbo.[Order], OrderStatusHistory where dbo.[Order].OrderID = OrderStatusHistory.OrderID and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' and MONTH(OrderStatusHistory.DateAdd) = MONTH(GETDATE())";
+            string query = "Select sum(total) " +
+                "from dbo.[Order], OrderStatusHistory " +
+                "where dbo.[Order].OrderID = OrderStatusHistory.OrderID " +
+                "and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' " +
+                "and MONTH(OrderStatusHistory.DateAdd) = MONTH(GETDATE())";
             DataTable tb = cn.LoadTable(query);
             string lst = tb.Rows[0][0].ToString();
             return lst;
@@ -99,6 +103,36 @@ namespace WebsiteLinhKienLocNuoc.DAO
             string lst = tb.Rows[0][0].ToString();
             return lst;
         }
-
+        public string GetCountOderInWeek()
+        {
+            string query = "SELECT Count(*) from dbo.[Order] " +
+                "Where DateAdd >= (select dateadd(week, datediff(week, 0, getdate()), 0) as S) " +
+                "and DateAdd < (select dateadd(week, datediff(week, 0, getdate()), 0) + 7 as F)";
+            DataTable tb = cn.LoadTable(query);
+            string lst = tb.Rows[0][0].ToString();
+            return lst;
+        }
+        public string GetCountOderInLastWeek()
+        {
+            string query = "SELECT Count(*) from dbo.[Order] " +
+                "Where DateAdd >= (select dateadd(week, datediff(week, 0, getdate()), 0)-7 as S) " +
+                "and DateAdd < (select dateadd(week, datediff(week, 0, getdate()), 0) as F)";
+            DataTable tb = cn.LoadTable(query);
+            string lst = tb.Rows[0][0].ToString();
+            return lst;
+        }
+        public string GetTotalMoneyOfMachineInMonth()
+        {
+            string query = "select sum(total) " +
+                "from dbo.[Order] join OrderStatusHistory on dbo.[Order].OrderID = OrderStatusHistory.OrderID " +
+                "join OrderDetail on OrderStatusHistory.OrderID = OrderDetail.OrderID " +
+                "join Product on Product.ProductID = OrderDetail.ProductID " +
+                "where OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' " +
+                "and MONTH(OrderStatusHistory.DateAdd) = MONTH(GETDATE()) " +
+                "and ProductName like N'%Máy lọc nước%'";
+            DataTable tb = cn.LoadTable(query);
+            string lst = tb.Rows[0][0].ToString();
+            return lst;
+        }
     }
 }

@@ -35,13 +35,19 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                 }
                 ViewBag.CartTotal = priceTotal;
                 ViewBag.CartNum = list.Count();
-                ViewBag.Discount = Session["discount"];
-                if (Session["priceAfterDiscount"] != null)
+                if (Session["discount"] == null)
                 {
-                    ViewBag.PriceAfterDiscount = Session["priceAfterDiscount"];
+                    ViewBag.Discount = 0;
                 } else
                 {
-                    ViewBag.PriceAfterDiscount = 0;
+                    ViewBag.Discount = Session["discount"];
+                }
+                if (Session["priceAfterDiscount"] == null)
+                {
+                    ViewBag.PriceAfterDiscount = priceTotal;
+                } else
+                {
+                    ViewBag.PriceAfterDiscount = Session["priceAfterDiscount"];
                 }
                 ViewBag.Voucher = Session["vouchercode"];
                 ViewBag.list = (List<Cart_item>)sessionCart;
@@ -80,8 +86,11 @@ namespace WebsiteLinhKienLocNuoc.Controllers
                     Session["priceAfterDiscount"] = priceAfterDiscount;
                     return RedirectToAction("Index", "Checkout");
                 }
-            } else
+            }
+            else
             {
+                Session["discount"] = 0;
+                Session["priceAfterDiscount"] = Int32.Parse(pricecheck);
                 TempData["Error"] = "Voucher không tồn tại";
                 return RedirectToAction("Index", "Checkout");
             }
@@ -98,8 +107,14 @@ namespace WebsiteLinhKienLocNuoc.Controllers
             order.Name = name;
             order.Phone = phone;
             order.Note = note;
-            order.Discount = Int32.Parse(discounting);
-            //order.Discount = priceAfterDiscount;
+            if (discounting != string.Empty)
+            {
+                order.Discount = Int32.Parse(discounting);
+            }
+            else
+            {
+                order.Discount = 0;
+            }
             if (Int32.Parse(shipid) == 2)
             {
                 order.ShippingFee = 30000;
@@ -113,6 +128,9 @@ namespace WebsiteLinhKienLocNuoc.Controllers
             int orderid = checkDAO.InsertOrder(order);
             InsertOrderHistory(orderid);
             InsertOrderDetail(orderid);
+            Session["discount"] = null;
+            Session["priceAfterDiscount"] = null;
+            Session["vouchercode"] = null;
             Message.set_flash("Đặt hàng thành công", "success");
             return Json(new
             {
@@ -145,7 +163,5 @@ namespace WebsiteLinhKienLocNuoc.Controllers
             }
             Session["SessionCart"] = new List<Cart_item>();
         }
-
-
     }
 }
