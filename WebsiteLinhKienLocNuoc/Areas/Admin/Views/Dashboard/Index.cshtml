@@ -2,6 +2,7 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
     var Reviews = (List<WebsiteLinhKienLocNuoc.Models.Review>)ViewBag.Reviews;
+    var orderStatusHistory = (List<WebsiteLinhKienLocNuoc.Models.OrderStatusHistory>)ViewBag.orderStatusHistory;
 }
 
 <div class="content-page">
@@ -326,7 +327,7 @@
                     </div>
                 </div>
                 <div class="card product-sales">
-                    <div class="card-body">
+                    <div class="card-body" style="margin-bottom: 9px">
                         <h5 class="mt-0 mb-4"><i class="ion-waterdrop h4 me-2 text-primary"></i> Máy lọc nước</h5>
                         <div class="row align-items-center mb-4">
                             <div class="col-6">
@@ -340,7 +341,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text-muted mb-3">Top Bán Hàng</p>
+                            <p class="text-muted mb-3">Top Mua Hàng</p>
                             <div class="row">
                                 <div class="col-6">
                                     <p class="text-muted mb-2">@ViewBag.Customer1: <b class="text-dark">@ViewBag.TotalCustomer1 đ</b></p>
@@ -357,7 +358,7 @@
 
             <div class="col-xl-4 col-md-6">
                 <div class="card messages">
-                    <div class="card-body" style="margin-bottom: 6px">
+                    <div class="card-body" style="margin-bottom: 13px">
                         <h4 class="mt-0 header-title">Đánh giá trong tháng</h4>
 
                         <nav class="mt-4">
@@ -399,56 +400,23 @@
 
             <div class="col-xl-4">
                 <div class="card">
-                    <div class="card-body" style="margin-bottom: 23px">
+                    <div class="card-body" style="margin-bottom: -25px">
                         <h4 class="mt-0 header-title">Thông Báo</h4>
 
                         <div class="p-2">
                             <ul class="list-unstyled rec-acti-list">
+                                @for (int i = 0; i < orderStatusHistory.Count; i++)
+                                {
                                 <li class="rec-acti-list-item">
                                     <div>
-                                        <p class="text-muted mb-1">25 Thg 12 2022, 09:30</p>
-                                        <h6 class="mb-0"><a href="#" class="text-dark">Đơn hàng #21 được duyệt</a></h6>
+                                        <p class="text-muted mb-1">@orderStatusHistory[i].DateAdd</p>
+                                        <h7 class="mb-0"><a class="text-dark">Đơn hàng #@orderStatusHistory[i].OrderID <a style="margin-left: 20px"></a> @orderStatusHistory[i].OrderStatusName</a></h7>
                                         <div class="delete-icon">
-                                            <a href="#" class="text-primary"><i class="mdi mdi-delete-forever h4"></i></a>
+                                            <a class="text-primary"><i class="mdi mdi-delete-forever h5" ></i></a>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="rec-acti-list-item">
-                                    <div>
-                                        <p class="text-muted mb-1">25 Thg 12 2022, 11:05</p>
-                                        <h6 class="mb-0"><a href="#" class="text-dark">Đơn hàng #5 được giao thành công</a></h6>
-                                        <div class="delete-icon">
-                                            <a href="#" class="text-primary"><i class="mdi mdi-delete-forever h4"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="rec-acti-list-item">
-                                    <div>
-                                        <p class="text-muted mb-1">25 Thg 12 2022, 10:16</p>
-                                        <h6 class="mb-0"><a href="#" class="text-dark">Đơn hàng #25 đang chờ phê duyệt</a></h6>
-                                        <div class="delete-icon">
-                                            <a href="#" class="text-primary"><i class="mdi mdi-delete-forever h4"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="rec-acti-list-item">
-                                    <div>
-                                        <p class="text-muted mb-1">25 Thg 12 2022, 11:24</p>
-                                        <h6 class="mb-0"><a href="#" class="text-dark">Đơn hàng #18 đang giao</a></h6>
-                                        <div class="delete-icon">
-                                            <a href="#" class="text-primary"><i class="mdi mdi-delete-forever h4"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="rec-acti-list-item">
-                                    <div>
-                                        <p class="text-muted mb-1">25 Thg 12 2022, 13:36</p>
-                                        <h6 class="mb-0"><a href="#" class="text-dark">Đơn hàng #26 đã hủy</a></h6>
-                                        <div class="delete-icon">
-                                            <a href="#" class="text-primary"><i class="mdi mdi-delete-forever h4"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
+                                }
                             </ul>
                         </div>
                     </div>

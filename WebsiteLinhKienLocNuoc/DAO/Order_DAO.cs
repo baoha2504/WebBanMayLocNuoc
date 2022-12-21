@@ -134,14 +134,24 @@ namespace WebsiteLinhKienLocNuoc.DAO
         }
         public DataTable GetTop2Customer()
         {
-            string query = "select top(2) FirstName+' '+LastName as Ten, sum(Total)  " +
-                "from dbo.[Order] join Customer on dbo.[Order].CustomerID = Customer.CustomerID " +
-                "where MONTH(DateAdd) = MONTH(GETDATE()) " +
+            string query = "select top(2) FirstName+' '+LastName as Ten, sum(Total) " +
+                "from dbo.[Order], Customer, OrderStatusHistory " +
+                "where MONTH(dbo.[Order].DateAdd) = MONTH(GETDATE()) " +
+                "and dbo.[Order].CustomerID = Customer.CustomerID " +
+                "and dbo.[Order].OrderID = OrderStatusHistory.OrderID " +
                 "and Access = 3 " +
+                "and OrderStatusHistory.OrderStatusName = N'Đã Giao Hàng' " +
                 "group by (FirstName+' '+LastName) " +
                 "order by sum(Total) desc";
             DataTable tb = cn.LoadTable(query);
             return tb;
+        }
+        public List<OrderStatusHistory> GetTop5OrderStatusHistoryNew()
+        {
+            string query = "select top 6 * from OrderStatusHistory order by DateAdd desc"; ;
+            DataTable tb = cn.FillDataTable(query, CommandType.Text);
+            List<OrderStatusHistory> sp = cn.ConvertToList<OrderStatusHistory>(tb);
+            return sp;
         }
     }
 }

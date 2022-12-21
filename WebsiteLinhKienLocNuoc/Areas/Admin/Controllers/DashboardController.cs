@@ -23,9 +23,11 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             List<Order> orders1 = new List<Order>();
             List<Order> orders2 = new List<Order>();
             List<Review> reviews = new List<Review>();
+            List<OrderStatusHistory> orderStatusHistory = new List<OrderStatusHistory>();
             Customer[] customer = new Customer[4];
             reviews = rvDao.GetTop4ReviewNew();
-            for(int i = 0; i < reviews.Count; i++)
+            orderStatusHistory = orderDAO.GetTop5OrderStatusHistoryNew();
+            for (int i = 0; i < reviews.Count; i++)
             {
                 customer[i] = cusDAO.GetCustomerbyID(reviews[i].CustomerID);
             }
@@ -124,6 +126,7 @@ namespace WebsiteLinhKienLocNuoc.Areas.Admin.Controllers
             ViewBag.Month = DateTime.Now.Month;
             ViewBag.Categories = cateDAO.GetCategories().Count();
             ViewBag.Subcategories = subDAO.GetSubCategories().Count();
+            ViewBag.orderStatusHistory = orderStatusHistory;
             return View();
         }
     }
