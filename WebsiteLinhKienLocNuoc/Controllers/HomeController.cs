@@ -23,7 +23,7 @@ namespace WebsiteLinhKienLocNuoc.Controllers
         public ActionResult SearchProduct(string key, int? page)
         {
             List<Product> Listproduct = new List<Product>();
-            if (ViewBag.key != null)
+            if (key != null)
             {
                 Listproduct = prDAO.FilterProDuct(key);
             }
