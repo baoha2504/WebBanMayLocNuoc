@@ -72,11 +72,29 @@ namespace WebsiteLinhKienLocNuoc.DAO
             return sp;
         }
 
-        public List<Product> GetProDuctByPrice(int id, string brand, int valuemin, int valuemax)
+        public List<Product> GetProDuctByPrice(int? id, string brand, int valuemin, int valuemax)
         {
             string query = "SELECT * FROM dbo.Product WHERE PriceNew BETWEEN @valuemin and @valuemax and ProductName like N'%'+@brand+'%' and Status = 1 and SubCategoriesID in(SELECT SubCategoriesID FROM dbo.SubCategories WHERE CategoriesID = @id ) ORDER BY DateAdded  DESC";
             string[] para = new string[4] { "@id", "@brand", "@valuemin", "@valuemax" };
             object[] value = new object[4] { id, brand, valuemin, valuemax };
+            DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
+            List<Product> sp = cn.ConvertToList<Product>(tb);
+            return sp;
+        }
+        public List<Product> GetProDuctByPrice1(int? id, int valuemin, int valuemax)
+        {
+            string query = "SELECT * FROM dbo.Product WHERE PriceNew BETWEEN @valuemin and @valuemax and Status = 1 and SubCategoriesID in(SELECT SubCategoriesID FROM dbo.SubCategories WHERE CategoriesID = @id ) ORDER BY DateAdded  DESC";
+            string[] para = new string[3] { "@id", "@valuemin", "@valuemax" };
+            object[] value = new object[3] { id, valuemin, valuemax };
+            DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
+            List<Product> sp = cn.ConvertToList<Product>(tb);
+            return sp;
+        }
+        public List<Product> GetProDuctByNone(int valuemin, int valuemax)
+        {
+            string query = "SELECT * FROM dbo.Product WHERE PriceNew BETWEEN @valuemin and @valuemax and Status = 1  ORDER BY DateAdded  DESC";
+            string[] para = new string[2] { "@valuemin", "@valuemax" };
+            object[] value = new object[2] { valuemin, valuemax };
             DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
             List<Product> sp = cn.ConvertToList<Product>(tb);
             return sp;

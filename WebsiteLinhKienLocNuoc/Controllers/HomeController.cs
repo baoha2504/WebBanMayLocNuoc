@@ -46,17 +46,49 @@ namespace WebsiteLinhKienLocNuoc.Controllers
             ViewBag.numResult = Listproduct.Count();
             return View(Listproduct.ToPagedList(pageNumber, pageSize));
         }
-        
-        public ActionResult AdvancedSearch(int category, string brand, int valuemin, int valuemax, int? page)
+
+        public ActionResult AdvancedSearch(int? category, string brand, int valuemin, int valuemax, int? page)
         {
-            List<Product> Listproduct = prDAO.GetProDuctByPrice(category, brand, valuemin, valuemax);
-            ViewBag.lst1 = Listproduct;
-            if (page == null) page = 1;
-            int pageSize = 8;
-            int pageNumber = (page ?? 1);
-            ViewBag.page = page;
-            ViewBag.numResult = Listproduct.Count();
-            return View(Listproduct.ToPagedList(pageNumber, pageSize));
+
+            if (brand == null)
+            {
+                if (category == null)
+                {
+                    List<Product> Listproduct = prDAO.GetProDuctByNone(valuemin, valuemax);
+                    ViewBag.lst1 = Listproduct;
+
+                    if (page == null) page = 1;
+                    int pageSize = 8;
+                    int pageNumber = (page ?? 1);
+                    ViewBag.page = page;
+                    ViewBag.numResult = Listproduct.Count();
+                    return View(Listproduct.ToPagedList(pageNumber, pageSize));
+                }
+                else
+                {
+                    List<Product> Listproduct = prDAO.GetProDuctByPrice1(category, valuemin, valuemax);
+                    ViewBag.lst1 = Listproduct;
+
+                    if (page == null) page = 1;
+                    int pageSize = 8;
+                    int pageNumber = (page ?? 1);
+                    ViewBag.page = page;
+                    ViewBag.numResult = Listproduct.Count();
+                    return View(Listproduct.ToPagedList(pageNumber, pageSize));
+                }
+            }
+            else
+            {
+                List<Product> Listproduct = prDAO.GetProDuctByPrice(category, brand, valuemin, valuemax);
+                ViewBag.lst1 = Listproduct;
+
+                if (page == null) page = 1;
+                int pageSize = 8;
+                int pageNumber = (page ?? 1);
+                ViewBag.page = page;
+                ViewBag.numResult = Listproduct.Count();
+                return View(Listproduct.ToPagedList(pageNumber, pageSize));
+            }
         }
         [HttpGet]
         public ActionResult Search(string search, string submit_search)
