@@ -8,10 +8,7 @@
 
 
 <div class="main-container container">
-
-
     <div class="row">
-
         <!--Middle Part Start-->
         <div id="content" class="col-md-12 col-sm-12">
             <div class="products-category">
@@ -20,7 +17,6 @@
                     <h3 class="modtitle">Tìm Kiếm Nâng Cao </h3>
                     <div class="modcontent ">
                         <form class="type_2" method="GET" action="/Home/AdvancedSearch">
-
                             <div class="table_layout filter-row">
                                 <div class="table_row">
                                     <!-- - - - - - - - - - - - - - SUB CATEGORY - - - - - - - - - - - - - - - - -->
@@ -123,13 +119,13 @@
                                 </div><!--/ .table_row -->
                                 <footer class="bottom_box">
                                     <div class="buttons_row">
-                                        <button type="submit" class="button_grey button_submit" onclick="AdvancedSearch();">Search</button>
+                                        <button type="submit" class="button_grey button_submit";">Search</button>
                                         <button type="reset" class="button_grey ">Reset</button>
                                     </div>
                                 </footer>
                             </div><!--/ .table_layout -->
                         </form>
-                    </div>""
+                    </div>
 
                 </div>
 
@@ -150,7 +146,7 @@
                         </div>
                         <div class="short-by-show form-inline text-right col-md-7 col-sm-8 col-xs-12">
                             <div class="form-group short-by">
-                                <label class="control-label" for="input-sort">Sort By:</label>
+                                <label class="control-label" for="input-sort">Sort by:</label>
                                 <select id="input-sort" class="form-control"
                                         onchange="location = this.value;">
                                     <option value="" selected="selected">Default</option>
@@ -282,6 +278,7 @@
 <script>
 
     function AdvancedSearch() {
+
         var choices = [];
         var els = document.getElementsByName('category');
         for (var i = 0; i < els.length; i++) {
@@ -292,3 +289,4 @@
         alert(choices.length);
     }
 </script>
+

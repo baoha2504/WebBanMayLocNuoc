@@ -71,6 +71,16 @@ namespace WebsiteLinhKienLocNuoc.DAO
             List<Product> sp = cn.ConvertToList<Product>(tb);
             return sp;
         }
+
+        public List<Product> GetProDuctByPrice(int id, string brand, int valuemin, int valuemax)
+        {
+            string query = "SELECT * FROM dbo.Product WHERE PriceNew BETWEEN @valuemin and @valuemax and ProductName like N'%'+@brand+'%' and Status = 1 and SubCategoriesID in(SELECT SubCategoriesID FROM dbo.SubCategories WHERE CategoriesID = @id ) ORDER BY DateAdded  DESC";
+            string[] para = new string[4] { "@id", "@brand", "@valuemin", "@valuemax" };
+            object[] value = new object[4] { id, brand, valuemin, valuemax };
+            DataTable tb = cn.FillDataTable(query, CommandType.Text, para, value);
+            List<Product> sp = cn.ConvertToList<Product>(tb);
+            return sp;
+        }
         public List<Product> GetRelateProDuct(int id)
         {
             string query = "select top(4) * from Product where SubCategoriesID = @id";
